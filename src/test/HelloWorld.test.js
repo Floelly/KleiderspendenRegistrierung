@@ -1,8 +1,10 @@
 import { describe } from "vitest";
 
-describe('Test up and running', () => {
+describe('Test environment up and running', () => {
   it('should pass', () => {
-    // This test is just to ensure the testing framework is set up correctly.
     expect(true).toBe(true);
+  });
+  it.fails('should fail', () => {
+    expect(false).toBe(true);
   });
 });
