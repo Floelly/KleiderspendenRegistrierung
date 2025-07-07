@@ -1,12 +1,50 @@
-# React + Vite
+# Kleiderspenden-Registrierung
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dies ist eine Webanwendung zur Registrierung von Kleiderspenden für einen gemeinnützigen Verein. Die Spendenden können entscheiden, ob ihre Spende abgeholt oder vor Ort in der Geschäftsstelle abgegeben werden soll. Zudem kann ein Krisengebiet ausgewählt werden, in das die Spende gesendet werden soll.
 
-Currently, two official plugins are available:
+## Tech-Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** (mit Vite als Build-Tool)
+- **Styled Components** für modulare und dynamische Styles
+- **ESLint** & **Prettier** für Codequalität und Formatierung
+- **Vitest** für Unit-Testing
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsives Design für verschiedene Geräte (Desktop, Tablet, Mobile)
+- Formular zur Erfassung von Spenden (inkl. Validierung)
+- Logik zur Prüfung von Abholadressen (Postleitzahlenvergleich)
+- Bestätigungsseite nach erfolgreicher Registrierung
+- Tests zur Sicherstellung der Funktionalität
+
+## Entwicklung starten
+
+```bash
+npm install
+npm run dev
+```
+
+## Tests ausführen
+
+```bash
+npm test
+```
+
+## Ordnerstruktur
+
+```
+├── public/                # Statische Dateien (z. B. favicon, index.html)
+├── src/                   # Quellcode der Anwendung
+│   ├── assets/            # Bilder, Logos, statische Medien
+│   ├── components/        # Wiederverwendbare React-Komponenten
+│   ├── pages/             # Seiten der Anwendung (z. B. Home, Registrierung)
+│   ├── routes/            # React Routen
+│   ├── styles/            # Globale Styled-Components oder Themes
+│   ├── App.jsx            # Hauptkomponente
+│   └── main.jsx           # Einstiegspunkt für React (mit Vite)
+├── tests/                 # Testsetup und Integrationstests
+├── eslint.config.js       # Linter-Konfiguration
+├── vite.config.js         # Vite Build-Konfiguration
+├── package.json           # Projekt-Metadaten und Abhängigkeiten
+└── README.md              # Diese Datei
+```
