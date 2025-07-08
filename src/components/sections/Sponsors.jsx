@@ -4,8 +4,9 @@ export default function Sponsors({sectionNumber}) {
 
   return (
     <>
-      <h1>Section Sponsors</h1>
-      <Section number={sectionNumber}></Section>
+      <Section number={sectionNumber}>
+        <h1>Section Sponsors</h1>
+      </Section>
     </>
   );
 }

@@ -4,8 +4,9 @@ export default function News({sectionNumber}) {
 
   return (
     <>
-      <h1>Section News</h1>
-      <Section number={sectionNumber}></Section>
+      <Section number={sectionNumber}>
+        <h1>Section News</h1>
+      </Section>
     </>
   );
 }

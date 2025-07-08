@@ -13,8 +13,8 @@ const TitlepageContainer = styled.div`
 export default function Titlepage({sectionNumber}) {
 
   return (
-    <TitlepageContainer>
-      <Section number={sectionNumber}></Section>
-    </TitlepageContainer>
+      <Section number={sectionNumber}>
+        <TitlepageContainer />
+      </Section>
   );
 }

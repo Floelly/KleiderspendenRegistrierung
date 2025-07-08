@@ -1,8 +1,18 @@
-const Section = ({ number }) => {
+import styled from "styled-components"
+
+const StyledSection = styled.section`
+    background-color: ${({ $variant, theme}) => $variant === 'light' ? theme.colors.lightBg : theme.colors.darkBg};
+    color: ${({ $variant, theme}) => $variant === 'light' ? theme.colors.lightText : theme.colors.darkText};
+  `
+
+const Section = ({ number, children, ...props }) => {
+  const variant = number % 2 === 1 ? 'light' : 'dark';
+
+
   return (
-    <section>
-      <p>This is the content of section {number}.</p>
-    </section>
+      <StyledSection $variant={variant} {...props}>
+        {children}
+      </StyledSection>
   );
 }
 

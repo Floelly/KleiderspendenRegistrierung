@@ -4,8 +4,9 @@ export default function About({sectionNumber}) {
 
   return (
     <>
-      <h1>Section About</h1>
-      <Section number={sectionNumber}></Section>
+      <Section number={sectionNumber}>
+        <h1>Section About</h1>
+      </Section>
     </>
   );
 }

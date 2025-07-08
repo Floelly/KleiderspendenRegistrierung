@@ -4,8 +4,9 @@ export default function DonationLocation({sectionNumber}) {
 
   return (
     <>
-      <h1>Section Donation Location</h1>
-      <Section number={sectionNumber}></Section>
+      <Section number={sectionNumber}>
+        <h1>Section Donation Location</h1>
+      </Section>
     </>
   );
 }
