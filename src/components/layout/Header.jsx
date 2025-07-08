@@ -12,7 +12,8 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   z-index: 10;
 
-  background-color: ${({isTop}) => (isTop ? "rgba(255, 0, 0, 0.1)" : "rgba(255, 0, 0, 0.5)")};
+  transition: background-color 0.3s ease, min-height 0.3s ease;
+  background-color: ${({isTop}) => (isTop ? "transparent" : "rgba(255, 0, 0, 1)")};
 `;
 
 export default function Header() {
