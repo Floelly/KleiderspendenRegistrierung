@@ -1,8 +1,21 @@
+import Section from "../ui/Section";
+import Titlepage from "../sections/Titlepage";
+
 export default function Main() {
-    //TODO: Add a header component
+  let sectionCounter = 0;
+
   return (
-    <header>
+    <main>
       <h1>MAIN</h1>
-    </header>
+      <Titlepage sectionNumber={++sectionCounter}></Titlepage>
+      <Section number={++sectionCounter}></Section>
+      <Section number={++sectionCounter}></Section>
+      <Section number={++sectionCounter}></Section>
+      <Section number={++sectionCounter}></Section>
+      <Section number={++sectionCounter}></Section>
+      <Section number={++sectionCounter}></Section>
+      <Section number={++sectionCounter}></Section>
+      <Section number={++sectionCounter}></Section>
+    </main>
   );
 }
