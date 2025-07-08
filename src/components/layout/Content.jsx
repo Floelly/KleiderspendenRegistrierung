@@ -14,7 +14,6 @@ export default function Main() {
 
   return (
     <main>
-      <h1>MAIN</h1>
       <Titlepage sectionNumber={++sectionCounter}></Titlepage>
       <About sectionNumber={++sectionCounter}></About>
       <Success sectionNumber={++sectionCounter}></Success>

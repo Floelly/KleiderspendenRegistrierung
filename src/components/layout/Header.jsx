@@ -1,8 +1,37 @@
+import { useEffect, useState } from "react";
+import styled from "styled-components"
+
+const StyledHeader = styled.header`
+  position: ${({isTop}) => (isTop ? "absolute" : "fixed")};
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: ${({isTop}) => (isTop ? "20vh" : "8vh")};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+
+  background-color: ${({isTop}) => (isTop ? "rgba(255, 0, 0, 0.1)" : "rgba(255, 0, 0, 0.5)")};
+`;
+
 export default function Header() {
-    //TODO: Add a header component
+  const [isTop, setIsTop] = useState(true);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsTop(window.scrollY < 50);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
   return (
-    <header>
+    <StyledHeader isTop={isTop}>
       <h1>HEADER</h1>
-    </header>
+    </StyledHeader>
   );
 }
