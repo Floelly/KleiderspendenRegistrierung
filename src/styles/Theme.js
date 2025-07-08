@@ -1,7 +1,7 @@
 const colors = {
   light: '#fdfaf5',
   dark: '#1e1e1e',
-  primary: '#b85c38',
+  primary: '#b95829',
   secondary: '#6e4f3a', // Gedämpftes Braun
   accent: '#e87c4a', // Satter Orange-Ton
 
