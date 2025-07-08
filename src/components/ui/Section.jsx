@@ -6,7 +6,7 @@ const StyledSection = styled.section`
   `
 
 const Section = ({ number, children, ...props }) => {
-  const variant = number % 2 === 1 ? 'light' : 'dark';
+  const variant = number % 2 === 0 ? 'light' : 'dark';
 
 
   return (
