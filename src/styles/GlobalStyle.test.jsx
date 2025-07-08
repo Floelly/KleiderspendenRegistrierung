@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { ThemeProvider } from 'styled-components'
-import TestComponent from '../components/TestComponent'
+import TestComponent from '../components/ui/TestComponent'
 import { Theme as theme } from './Theme'
 import GlobalStyle from './GlobalStyle'
 import '@testing-library/jest-dom'
