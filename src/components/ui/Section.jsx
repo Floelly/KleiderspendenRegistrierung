@@ -10,6 +10,14 @@ const StyledSection = styled.section`
       background-color: ${({ theme}) => theme.colors.darkBg};
       color: ${({ theme}) => theme.colors.darkText};
     }
+
+    &:not(:first-child):nth-child(odd) {
+      padding-top: 20vh;
+    }
+
+    &:not(:last-child):not(:first-child):nth-child(odd) {
+      padding-bottom: 20vh;
+    }
     
     &:not(:first-child):nth-child(odd)::before {
       content: '';
