@@ -1,10 +1,10 @@
 import Section from "../ui/Section";
 
-export default function DonationLocation({sectionNumber}) {
+export default function DonationLocation() {
 
   return (
     <>
-      <Section number={sectionNumber}>
+      <Section>
         <h1>Section Donation Location</h1>
       </Section>
     </>

@@ -1,10 +1,10 @@
 import Section from "../ui/Section";
 
-export default function Sponsors({sectionNumber}) {
+export default function Sponsors() {
 
   return (
     <>
-      <Section number={sectionNumber}>
+      <Section>
         <h1>Section Sponsors</h1>
       </Section>
     </>

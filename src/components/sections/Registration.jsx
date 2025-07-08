@@ -1,10 +1,10 @@
 import Section from "../ui/Section";
 
-export default function Registration({sectionNumber}) {
+export default function Registration() {
 
   return (
     <>
-      <Section number={sectionNumber}>
+      <Section>
         <h1>Section Registration</h1>
       </Section>
     </>

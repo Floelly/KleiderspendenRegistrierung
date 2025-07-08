@@ -1,10 +1,10 @@
 import Section from "../ui/Section";
 
-export default function InDemandItems({sectionNumber}) {
+export default function InDemandItems() {
 
   return (
     <>
-      <Section number={sectionNumber}>
+      <Section>
         <h1>Section In Demand Items</h1>
       </Section>
     </>
