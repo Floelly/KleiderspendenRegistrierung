@@ -26,7 +26,6 @@ export const Theme = {
     accent: colors.accent,
   },
   breakpoints: {
-    mobile: '768px',
-    tablet: '1024px',
+    desktop: '1024px',
   },
 };
