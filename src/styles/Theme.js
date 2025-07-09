@@ -29,10 +29,10 @@ export const Theme = {
     mono: "'Courier New', monospace",
   },
   fontSizes: {
-    body: 'clamp(1rem, 1.2vw, 1.2rem)',
+    body: 'clamp(1rem, 1.2vw, 1.5rem)',
     h1: 'clamp(2rem, 4vw, 3rem)',
-    h2: 'clamp(1.5rem, 3vw, 2.5rem)',
-    small: 'clamp(0.875rem, 1vw, 1rem)',
+    h2: 'clamp(1.5rem, 3vw, 2.6rem)',
+    small: 'clamp(0.875rem, 1vw, 1.2rem)',
   },
   colors: {
     light: '#fdfaf5',
