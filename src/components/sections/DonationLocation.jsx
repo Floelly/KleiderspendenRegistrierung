@@ -4,7 +4,7 @@ import manilaImage from "../../assets/location_manila.jpg";
 import ukraineImage from "../../assets/location_ukraine.jpg";
 import RoundImage from "../ui/RoundImage";
 import LocationCard from "../ui/LocationCard";
-import OptionalFlexRow from "../ui/OptionalFlexRow";
+import CardGrid from "../ui/CardGrid";
 import CenteredText from "../ui/CenteredText";
 
 export default function DonationLocation() {
@@ -12,12 +12,12 @@ export default function DonationLocation() {
   return (
     <>
       <Section>
-        <OptionalFlexRow>
-          <CenteredText>
-            <h2>Spendenziele weltweit</h2>
-            <p>Unsere Kleiderspenden erreichen Menschen in über 189 Regionen – unter anderem hier:</p>
-          </CenteredText>
-  
+        <CenteredText>
+          <h2>Spendenziele weltweit</h2>
+          <p>Unsere Kleiderspenden erreichen Menschen in über 189 Regionen – unter anderem hier:</p>
+        </CenteredText>
+
+        <CardGrid>
           <LocationCard>
             <RoundImage src={kapstadtImage} alt="Kapstadt, Südafrika" title="Bildquelle: https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-HwFJlomisJ4"/>
             <h3>Kapstadt, Südafrika</h3>
@@ -41,11 +41,11 @@ export default function DonationLocation() {
               Seit 2022 liefern wir regelmäßig Kleidung an Hilfszentren im Westen der Ukraine für Geflüchtete und Bedürftige.
             </p>
           </LocationCard>
+        </CardGrid>
 
-          <CenteredText>
-            <button type="button">Weitere Spendenorte entdecken</button>
-          </CenteredText>
-        </OptionalFlexRow>
+        <div style={{ textAlign: "right" }}>
+          <button type="button">Weitere Spendenorte entdecken</button>
+        </div>
       </Section>
     </>
   );

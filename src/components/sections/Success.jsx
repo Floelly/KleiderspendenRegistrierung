@@ -1,5 +1,5 @@
 import Section from "../ui/Section";
-import OptionalFlexRow from "../ui/OptionalFlexRow.jsx";
+import CardGrid from "../ui/CardGrid.jsx";
 import SuccessCard from "../ui/SuccessCard.jsx";
 import CenteredText from "../ui/CenteredText.jsx";
 
@@ -16,11 +16,11 @@ export default function Success() {
           </p>
         </CenteredText>
 
-        <OptionalFlexRow>
+        <CardGrid>
           <SuccessCard success="1900+" description="glückliche Spender:innen"/>
           <SuccessCard success="17" description="verschiedene Spendenziele weltweit"/>
           <SuccessCard success="17.000+" description="gespendete Kleidungsstücke"/>
-        </OptionalFlexRow>
+        </CardGrid>
       </Section>
     </>
   );
