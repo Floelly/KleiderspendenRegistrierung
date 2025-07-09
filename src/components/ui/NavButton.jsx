@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import menuIconSrc from '/src/assets/MenuIcon.svg';
+import { IoMenuSharp  } from "react-icons/io5";
 
-const IconButton = styled.button`
+const IconButton = styled(IoMenuSharp )`
   background: transparent;
   border: none;
   padding: 0;
@@ -25,7 +25,7 @@ const IconImage = styled.img`
 
 const NavButton = ({ onClick }) => (
   <IconButton onClick={onClick} aria-label="Nav menu">
-    <IconImage src={menuIconSrc} alt="Menu Icon" />
+    <IconImage alt="Menu Icon" />
   </IconButton>
 );
 
