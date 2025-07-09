@@ -1,3 +1,4 @@
+import LandscapeImage from "../ui/LandscapeImage";
 import Section from "../ui/Section";
 import annaImage from "/src/assets/news_anna.jpg";
 import clothsImage from "/src/assets/news_clothes.jpg";
@@ -11,7 +12,7 @@ export default function News() {
         <h2>Neuigkeiten & Geschichten</h2>
 
         <article>
-          <img src={hamburgImage} alt="Neues Zentrum Hamburg" title="Bildquelle: https://unsplash.com/photos/a-brick-building-with-windows-and-a-sign-on-it-NOKuyUVkPZI" />
+          <LandscapeImage src={hamburgImage} alt="Neues Zentrum Hamburg" title="Bildquelle: https://unsplash.com/photos/a-brick-building-with-windows-and-a-sign-on-it-NOKuyUVkPZI" />
           <h3>Neue Hilfezentren in Hamburg & Leipzig</h3>
           <p>9. Juli 2025</p>
           <p>
@@ -21,7 +22,7 @@ export default function News() {
         </article>
 
         <article>
-          <img src={clothsImage} alt="Haufen Klamotten" title="Bildquelle: https://unsplash.com/photos/a-pile-of-colorful-clothing-sitting-on-top-of-a-bed-PZh2jybKh0I" />
+          <LandscapeImage src={clothsImage} alt="Haufen Klamotten" title="Bildquelle: https://unsplash.com/photos/a-pile-of-colorful-clothing-sitting-on-top-of-a-bed-PZh2jybKh0I" />
           <h3>Spendenrekord geknackt!</h3>
           <p>24. Juni 2025</p>
           <p>
@@ -31,7 +32,7 @@ export default function News() {
         </article>
 
         <article>
-          <img src={annaImage} alt="Teammitglied Anna lächelt in die Kamera" title="Bildquelle: https://unsplash.com/photos/woman-wearing-black-shirt-smiling-photography-tpvSmb_EfXU"/>
+          <LandscapeImage src={annaImage} alt="Teammitglied Anna lächelt in die Kamera" title="Bildquelle: https://unsplash.com/photos/woman-wearing-black-shirt-smiling-photography-tpvSmb_EfXU"/>
           <h3>Im Fokus: Anna aus Frankfurt</h3>
           <p>10. Juni 2025</p>
           <p>

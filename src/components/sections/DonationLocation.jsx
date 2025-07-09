@@ -2,44 +2,50 @@ import Section from "../ui/Section";
 import kapstadtImage from "/src/assets/location_kapstadt.jpg";
 import manilaImage from "../../assets/location_manila.jpg";
 import ukraineImage from "../../assets/location_ukraine.jpg";
+import RoundImage from "../ui/RoundImage";
+import LocationCard from "../ui/LocationCard";
+import OptionalFlexRow from "../ui/OptionalFlexRow";
+import CenteredText from "../ui/CenteredText";
 
 export default function DonationLocation() {
 
   return (
     <>
       <Section>
-        <div>
-          <h2>Spendenziele weltweit</h2>
-          <p>Unsere Kleiderspenden erreichen Menschen in über 189 Regionen – unter anderem hier:</p>
+        <OptionalFlexRow>
+          <CenteredText>
+            <h2>Spendenziele weltweit</h2>
+            <p>Unsere Kleiderspenden erreichen Menschen in über 189 Regionen – unter anderem hier:</p>
+          </CenteredText>
   
-          <article>
-            <img src={kapstadtImage} alt="Kapstadt, Südafrika" title="Bildquelle: https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-HwFJlomisJ4"/>
+          <LocationCard>
+            <RoundImage src={kapstadtImage} alt="Kapstadt, Südafrika" title="Bildquelle: https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-HwFJlomisJ4"/>
             <h3>Kapstadt, Südafrika</h3>
             <p>
               In Zusammenarbeit mit lokalen Organisationen versorgen wir Bedürftige in den Townships mit warmer Kleidung.
             </p>
-          </article>
+          </LocationCard>
 
-          <article>
-            <img src={manilaImage} alt="Manila, Philippinen" title="Bildquelle: https://unsplash.com/photos/woman-in-black-tank-top-and-black-pants-holding-umbrella-standing-beside-green-car-during-daytime--bMWUB5_Lj8" />
+          <LocationCard>
+            <RoundImage src={manilaImage} alt="Manila, Philippinen" title="Bildquelle: https://unsplash.com/photos/woman-in-black-tank-top-and-black-pants-holding-umbrella-standing-beside-green-car-during-daytime--bMWUB5_Lj8" />
             <h3>Manila, Philippinen</h3>
             <p>
               In den dicht besiedelten Vororten unterstützen wir Familien mit sauberer, intakter Kleidung für Alltag und Schule.
             </p>
-          </article>
+          </LocationCard>
 
-          <article>
-            <img src={ukraineImage} alt="Lwiw, Ukraine" title="Bildquelle: https://unsplash.com/photos/a-pile-of-rubble-sitting-next-to-a-building-81Dc3H1iipk" />
+          <LocationCard>
+            <RoundImage src={ukraineImage} alt="Lwiw, Ukraine" title="Bildquelle: https://unsplash.com/photos/a-pile-of-rubble-sitting-next-to-a-building-81Dc3H1iipk" />
             <h3>Lwiw, Ukraine</h3>
             <p>
               Seit 2022 liefern wir regelmäßig Kleidung an Hilfszentren im Westen der Ukraine für Geflüchtete und Bedürftige.
             </p>
-          </article>
-        </div>
+          </LocationCard>
 
-        <div>
-          <button type="button">Weitere Spendenorte entdecken</button>
-        </div>
+          <CenteredText>
+            <button type="button">Weitere Spendenorte entdecken</button>
+          </CenteredText>
+        </OptionalFlexRow>
       </Section>
     </>
   );

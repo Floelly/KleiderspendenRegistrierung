@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const ImageWrapper = styled.div`
   aspect-ratio: 1 / 1;
-  width: 100%;
+  width: ${({ $width }) => $width || "90%"};
   border-radius: 50%;
   overflow: hidden;
-  display: inline-block;
+  margin: ${({theme}) => theme.spacing.m} auto;
 `;
 
 const StyledImg = styled.img`
@@ -16,8 +16,8 @@ const StyledImg = styled.img`
   display: block;
 `;
 
-const RoundImage = ({ src, alt, title }) => (
-  <ImageWrapper>
+const RoundImage = ({ src, alt, title, width }) => (
+  <ImageWrapper $width={width}>
     <StyledImg src={src} alt={alt} title={title} />
   </ImageWrapper>
 );
