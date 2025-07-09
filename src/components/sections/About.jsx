@@ -16,7 +16,7 @@ export default function About() {
           </p>
           <p><strong>Wähle dein Ziel. Wir machen den Rest.</strong></p>
         </div>
-        <RoundImage src="/src/assets/kleiderspende.jpg" alt="Foto Kleiderspende" />
+        <RoundImage src="/src/assets/kleiderspende.jpg" alt="Foto Kleiderspende" title="Bildquelle: https://unsplash.com/photos/person-holding-white-clothes-hanger-aAVVmgod3N4" />
       </Section>
     </>
   );

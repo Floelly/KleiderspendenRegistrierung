@@ -16,9 +16,9 @@ const StyledImg = styled.img`
   display: block;
 `;
 
-const RoundImage = ({ src, alt }) => (
+const RoundImage = ({ src, alt, title }) => (
   <ImageWrapper>
-    <StyledImg src={src} alt={alt} />
+    <StyledImg src={src} alt={alt} title={title} />
   </ImageWrapper>
 );
 
