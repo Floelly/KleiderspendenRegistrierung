@@ -18,6 +18,12 @@ const GlobalStyle = createGlobalStyle`
     font-size: clamp(1.5rem, 2vw, 2.5rem);
     font-weight: 700;
   }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 `;
 
 export default GlobalStyle;

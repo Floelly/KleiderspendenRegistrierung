@@ -28,7 +28,7 @@ const DonateButton = styled.button`
   font-size: clamp(.8rem, 2vw, 1.5rem);
 
   &:hover {
-    opacity: 0.7;
+    transform: scale(1.1);
   }
 `;
 

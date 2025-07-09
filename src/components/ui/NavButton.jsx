@@ -13,7 +13,7 @@ const IconButton = styled(IoMenuSharp )`
   height: clamp(1rem, 10vw, 5rem);
 
   &:hover {
-    opacity: 0.7;
+    transform: scale(1.1);
   }
 `;
 
