@@ -9,7 +9,10 @@ export const Theme = {
   },
   sizes: {
     contentWidth: 'clamp(60vw, 95vw, 1300px)',
-    headerHeight: 'clamp(3rem, 5vw, 6rem)',
+    header: {
+      large: '20vh',
+      small: '8vh',
+    },
     footerMinHeight: '20vh',
     titlePageHeight: '90vh',
     logoSize: 'clamp(1.1rem, 11vw, 5.5rem)',
