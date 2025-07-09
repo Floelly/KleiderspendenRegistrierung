@@ -2,39 +2,44 @@ import Section from "../ui/Section";
 import { GiUnderwear, GiMonclerJacket, GiConverseShoe, GiTrousers } from "react-icons/gi";
 import { PiShirtFoldedFill } from "react-icons/pi";
 import { IoShirt } from "react-icons/io5";
+import CenteredText from "../ui/CenteredText";
+import DemandCard from "../ui/DemandCard";
+import CardGrid from "../ui/CardGrid";
 
 export default function InDemandItems() {
   return (
     <Section>
-      <h2>Besonders gefragt</h2>
-      <p>Diese Kleidungsstücke werden aktuell besonders häufig benötigt:</p>
+      <CenteredText>
+        <h2>Besonders gefragt</h2>
+        <p>Diese Kleidungsstücke werden aktuell besonders häufig benötigt:</p>
+      </CenteredText>
 
-      <ul>
-        <li>
+      <CardGrid $minWidth="100px">
+        <DemandCard>
           <IoShirt alt="T-Shirt Icon" />
-          <span>T-Shirts</span>
-        </li>
-        <li>
+          <p>T-Shirts</p>
+        </DemandCard>
+        <DemandCard>
           <GiTrousers alt="Jeans Icon" />
-          <span>Jeans</span>
-        </li>
-        <li>
+          <p>Jeans</p>
+        </DemandCard>
+        <DemandCard>
           <GiMonclerJacket alt="Jacke Icon" />
-          <span>Jacken</span>
-        </li>
-        <li>
+          <p>Jacken</p>
+        </DemandCard>
+        <DemandCard>
           <GiConverseShoe alt="Schuhe Icon" />
-          <span>Schuhe</span>
-        </li>
-        <li>
+          <p>Schuhe</p>
+        </DemandCard>
+        <DemandCard>
           <PiShirtFoldedFill alt="Hemden Icon" />
-          <span>Hemden</span>
-        </li>
-        <li>
+          <p>Hemden</p>
+        </DemandCard>
+        <DemandCard>
           <GiUnderwear alt="Unterwäsche Icon" />
-          <span>Unterwäsche (neu)</span>
-        </li>
-      </ul>
+          <p>Unterwäsche (neu)</p>
+        </DemandCard>
+      </CardGrid>
     </Section>
   );
 }
