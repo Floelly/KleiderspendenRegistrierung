@@ -1,5 +1,6 @@
 import Section from "../ui/Section";
 import RoundImage from "../ui/RoundImage";
+import aboutImage from "/src/assets/About_Kleiderspende.jpg";
 
 export default function About() {
 
@@ -16,7 +17,7 @@ export default function About() {
           </p>
           <p><strong>Wähle dein Ziel. Wir machen den Rest.</strong></p>
         </div>
-        <RoundImage src="/src/assets/kleiderspende.jpg" alt="Foto Kleiderspende" title="Bildquelle: https://unsplash.com/photos/person-holding-white-clothes-hanger-aAVVmgod3N4" />
+        <RoundImage src={aboutImage} alt="Foto Kleiderspende" title="Bildquelle: https://unsplash.com/photos/person-holding-white-clothes-hanger-aAVVmgod3N4" />
       </Section>
     </>
   );

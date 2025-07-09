@@ -1,4 +1,7 @@
 import Section from "../ui/Section";
+import kapstadtImage from "/src/assets/location_kapstadt.jpg";
+import manilaImage from "../../assets/location_manila.jpg";
+import ukraineImage from "../../assets/location_ukraine.jpg";
 
 export default function DonationLocation() {
 
@@ -6,8 +9,11 @@ export default function DonationLocation() {
     <>
       <Section>
         <div>
+          <h2>Spendenziele weltweit</h2>
+          <p>Unsere Kleiderspenden erreichen Menschen in über 189 Regionen – unter anderem hier:</p>
+  
           <article>
-            <img src="pfad/zu/kapstadt.jpg" alt="Kapstadt, Südafrika" />
+            <img src={kapstadtImage} alt="Kapstadt, Südafrika" title="Bildquelle: https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-HwFJlomisJ4"/>
             <h3>Kapstadt, Südafrika</h3>
             <p>
               In Zusammenarbeit mit lokalen Organisationen versorgen wir Bedürftige in den Townships mit warmer Kleidung.
@@ -15,7 +21,7 @@ export default function DonationLocation() {
           </article>
 
           <article>
-            <img src="pfad/zu/manila.jpg" alt="Manila, Philippinen" />
+            <img src={manilaImage} alt="Manila, Philippinen" title="Bildquelle: https://unsplash.com/photos/woman-in-black-tank-top-and-black-pants-holding-umbrella-standing-beside-green-car-during-daytime--bMWUB5_Lj8" />
             <h3>Manila, Philippinen</h3>
             <p>
               In den dicht besiedelten Vororten unterstützen wir Familien mit sauberer, intakter Kleidung für Alltag und Schule.
@@ -23,7 +29,7 @@ export default function DonationLocation() {
           </article>
 
           <article>
-            <img src="pfad/zu/ukraine.jpg" alt="Lwiw, Ukraine" />
+            <img src={ukraineImage} alt="Lwiw, Ukraine" title="Bildquelle: https://unsplash.com/photos/a-pile-of-rubble-sitting-next-to-a-building-81Dc3H1iipk" />
             <h3>Lwiw, Ukraine</h3>
             <p>
               Seit 2022 liefern wir regelmäßig Kleidung an Hilfszentren im Westen der Ukraine für Geflüchtete und Bedürftige.
