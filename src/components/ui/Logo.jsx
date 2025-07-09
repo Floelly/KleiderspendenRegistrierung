@@ -1,12 +1,10 @@
 import styled from 'styled-components';
+import logoSrc from '/src/assets/favicon.svg';
 
-const Logo = styled.div`
-  width: ${({ $size }) => $size || '100px'};
-  height: ${({ $size }) => $size || '100px'};
-  background-image: url("src/assets/favicon.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+const Logo = styled.img`
+  width: clamp(1.1rem, 11vw, 5.5rem);
+  height: clamp(1.1rem, 11vw, 5.5rem);
+  transform: translateY(0.2rem);
 `;
 
-export default Logo;
+export default () => <Logo src={logoSrc} alt="Logo" />;

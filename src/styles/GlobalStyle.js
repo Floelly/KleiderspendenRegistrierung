@@ -13,6 +13,11 @@ const GlobalStyle = createGlobalStyle`
     background: #f9fafb;
     color: #1e293b;
   }
+
+  h1 {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    font-weight: 700;
+  }
 `;
 
 export default GlobalStyle;
