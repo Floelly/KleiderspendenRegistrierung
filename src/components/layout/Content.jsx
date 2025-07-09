@@ -17,9 +17,9 @@ export default function Main() {
       <Titlepage sectionNumber={++sectionCounter}></Titlepage>
       <About sectionNumber={++sectionCounter}></About>
       <Success sectionNumber={++sectionCounter}></Success>
-      <News sectionNumber={++sectionCounter}></News>
-      <DonationLocation sectionNumber={++sectionCounter}></DonationLocation>
       <InDemandItems sectionNumber={++sectionCounter}></InDemandItems>
+      <DonationLocation sectionNumber={++sectionCounter}></DonationLocation>
+      <News sectionNumber={++sectionCounter}></News>
       <Registration sectionNumber={++sectionCounter}></Registration>
       <Sponsors sectionNumber={++sectionCounter}></Sponsors>
       <JoinUs sectionNumber={++sectionCounter}></JoinUs>
