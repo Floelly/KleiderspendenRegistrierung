@@ -1,31 +1,53 @@
-const colors = {
-  light: '#fdfaf5',
-  dark: '#1e1e1e',
-  primary: '#b95829',
-  secondary: '#6e4f3a', // Gedämpftes Braun
-  accent: '#e87c4a', // Satter Orange-Ton
-
-  secondary2: '#b85c38', // Rostbraun
-  accent2: '#f4a261', // Warmes Orange
-  further1: '#ffffff',
-  further2: '#e0dcd3',
-  further3: '#2c2c2c',
-  further4: '#3a3a3a',
-};
-
-
 export const Theme = {
+  
+  spacing: {
+    xs: 'clamp(0.25rem, 0.5vw, 0.5rem)',
+    s: 'clamp(0.5rem, 1vw, 1rem)',
+    m: 'clamp(1rem, 2vw, 2rem)',
+    l: 'clamp(2rem, 4vw, 4rem)',
+    containerWidth: 'clamp(20rem, 80vw, 120rem)',
+  },
+  sizes: {
+    contentWidth: 'clamp(60vw, 95vw, 1300px)',
+    headerHeight: 'clamp(3rem, 5vw, 6rem)',
+    footerMinHeight: '20vh',
+    titlePageHeight: '90vh',
+    logoSize: 'clamp(1.1rem, 11vw, 5.5rem)',
+    iconSize: 'clamp(1rem, 10vw, 5rem)',
+    section: {
+      minHeight: '50vh',
+      triangleTop: '20vh',
+      triangleBottom: '20vh',
+    },
+  },
+  fonts: {
+    body: "'Inter', sans-serif",
+    heading: "'Segoe UI', 'Helvetica Neue', 'San Francisco', Arial, sans-serif",
+    mono: "'Courier New', monospace",
+  },
+  fontSizes: {
+    body: 'clamp(1rem, 1.2vw, 1.2rem)',
+    h1: 'clamp(2rem, 4vw, 3rem)',
+    h2: 'clamp(1.5rem, 3vw, 2.5rem)',
+    small: 'clamp(0.875rem, 1vw, 1rem)',
+  },
   colors: {
-    darkBg: colors.dark,
-    lightBg: colors.light,
-    darkText: colors.light,
-    lightText: colors.dark,
-
-    primary: colors.primary,
-    secondary: colors.secondary,
-    accent: colors.accent,
+    light: '#fdfaf5',
+    dark: '#1e1e1e',
+    primary: '#b95829',
   },
   breakpoints: {
-    desktop: '1024px',
+    s: '480px',
+    m: '768px',
+    l: '1024px',
   },
+  zIndex: {
+    background: -1,
+    default: 1,
+    contentOverlay: 5,
+    header: 10,
+    footer: 10,
+    modal: 100,
+    tooltip: 200
+  }
 };

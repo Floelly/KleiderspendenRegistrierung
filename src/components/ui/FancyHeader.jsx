@@ -17,6 +17,6 @@ const StyledHeader = styled.header`
 
   //TODO: überdenken
   background-color: ${({$isTop, theme}) => ($isTop ? "transparent" : theme.colors.primary)};
-  color: ${({theme}) => theme.colors.darkText};
+  color: ${({theme}) => theme.colors.light};
 `;
 export default StyledHeader;

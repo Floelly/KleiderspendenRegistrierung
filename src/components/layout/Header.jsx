@@ -4,9 +4,9 @@ import FancyHeader from "../ui/FancyHeader";
 import NavButton from "../ui/NavButton";
 import Logo from "../ui/Logo";
 import FlexRow from "../ui/FlexRow";
-import { ContentContainer } from "../ui/Section.jsx";
+import { HeaderContainer } from "../ui/Container.jsx";
 
-const Container = styled(ContentContainer)`
+const Container = styled(HeaderContainer)`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -19,17 +19,25 @@ const RightGroup = styled(FlexRow)`
 
 const DonateButton = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.darkText};
-  border: 1px solid ${({ theme }) => theme.colors.lightBg};
-  padding: clamp(0.3rem, 1vw, 0.6rem) clamp(0.8rem, 2vw, 1.2rem);
-  border-radius: 4px;
+  color: ${({ theme }) => theme.colors.light};
+  border: 1px solid ${({ theme }) => theme.colors.light};
+  padding: ${({ theme }) => theme.spacing.s} ${({ theme }) => theme.spacing.m};
   cursor: pointer;
   font-weight: 600;
-  font-size: clamp(.8rem, 2vw, 1.5rem);
+  font-size: ${({ theme }) => theme.fontSizes.body};
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
+`;
+
+const Logoname = styled.h1`
+  margin: 0;
+  font-family: ${({ theme }) => theme.fonts.heading};
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 `;
 
 export default function Header() {
@@ -51,7 +59,7 @@ export default function Header() {
       <Container>
         <FlexRow>
           <Logo />
-          <h1>Fairstofft!</h1>
+          <Logoname>Fairstofft!</Logoname>
         </FlexRow>
 
         <RightGroup>

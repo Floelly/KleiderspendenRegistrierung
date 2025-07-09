@@ -4,13 +4,12 @@ import { IoMenuSharp  } from "react-icons/io5";
 const IconButton = styled(IoMenuSharp )`
   background: transparent;
   border: none;
-  padding: 0;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(1rem, 10vw, 5rem);
-  height: clamp(1rem, 10vw, 5rem);
+  width: ${({ theme }) => theme.sizes.iconSize};
+  height: ${({ theme }) => theme.sizes.iconSize};
 
   &:hover {
     transform: scale(1.1);

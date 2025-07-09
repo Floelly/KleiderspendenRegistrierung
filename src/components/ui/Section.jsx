@@ -1,28 +1,23 @@
 import styled from "styled-components"
-
-export const ContentContainer = styled.div`
-  width: clamp(60vw, 95vw, 1300px);  // In theme packen!
-  margin: 0 auto;
-  padding-block: clamp(0.1rem, 1vw, 0.5rem);
-`;
+import ContentContainer from "./Container";
 
 const StyledSection = styled.section`
-    background-color: ${({ theme}) => theme.colors.lightBg};
-    color: ${({ theme}) => theme.colors.lightText };
+    background-color: ${({ theme}) => theme.colors.light};
+    color: ${({ theme}) => theme.colors.dark };
     position: relative;
-    min-height: 50vh;
+    min-height: ${({ theme }) => theme.sizes.section.minHeight};
 
     &:nth-child(odd) {
-      background-color: ${({ theme}) => theme.colors.darkBg};
-      color: ${({ theme}) => theme.colors.darkText};
+      background-color: ${({ theme}) => theme.colors.dark};
+      color: ${({ theme}) => theme.colors.light};
     }
 
     &:not(:first-child):nth-child(odd) {
-      padding-top: 20vh;
+      padding-top: ${({ theme }) => theme.sizes.section.triangleTop};
     }
 
     &:not(:last-child):not(:first-child):nth-child(odd) {
-      padding-bottom: 20vh;
+      padding-bottom: ${({ theme }) => theme.sizes.section.triangleBottom};
     }
     
     &:not(:first-child):nth-child(odd)::before {
@@ -31,11 +26,11 @@ const StyledSection = styled.section`
       top: -1px;
       left: 0;
       width: 100%;
-      height: 20vh;
+      height: ${({ theme }) => theme.sizes.section.triangleTop};
 
-      background-color: ${({theme}) => theme.colors.lightBg};
+      background-color: ${({theme}) => theme.colors.light};
       clip-path: polygon(0 0, 100% 0, 100% 1%, 0 100%);
-      z-index: 1;
+      z-index: ${({ theme }) => theme.zIndex.contentOverlay};
     }    
 
     &:not(:last-child):nth-child(odd)::after {
@@ -44,10 +39,10 @@ const StyledSection = styled.section`
       bottom: -1px;
       left: 0;
       width: 100%;
-      height: 20vh;
-      background-color: ${({theme}) => theme.colors.lightBg};
+      height: ${({ theme }) => theme.sizes.section.triangleTop};
+      background-color: ${({theme}) => theme.colors.light};
       clip-path: polygon(0 99%, 100% 0, 100% 100%, 0 100%);
-      z-index: 1;
+      z-index: ${({ theme }) => theme.zIndex.contentOverlay};
     }
   `
 

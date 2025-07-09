@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import footerImage from "/src/assets/FooterImage.jpg";
 
 const StyledFooter = styled.footer`
-  background: url('src/assets/FooterImage.jpg');
+  background: url(${footerImage});
   background-position: center 15%;
   background-size: cover;
-  color: ${({ theme }) => theme.colors.textLight};
+  color: ${({ theme }) => theme.colors.dark};
   text-align: center;
   width: 100%;
-  min-height: 20vh;
+  min-height: ${({ theme }) => theme.sizes.footerMinHeight};
 `;
 export default StyledFooter;
