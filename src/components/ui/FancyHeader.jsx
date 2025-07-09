@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  min-height: ${({$isTop}) => ($isTop ? "20vh" : "8vh")};
+  min-height: ${({$isTop, theme}) => ($isTop ? theme.sizes.header.large : theme.sizes.header.small)};
   
   display: flex;
   align-items: center;
