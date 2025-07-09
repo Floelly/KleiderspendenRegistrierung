@@ -3,7 +3,6 @@ import styled from "styled-components";
 import FancyHeader from "../ui/FancyHeader";
 import NavButton from "../ui/NavButton";
 import Logo from "../ui/Logo";
-import FlexRow from "../ui/FlexRow";
 import { HeaderContainer } from "../ui/Container.jsx";
 
 const Container = styled(HeaderContainer)`
@@ -11,10 +10,18 @@ const Container = styled(HeaderContainer)`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: ${({ theme }) => theme.spacing.s};
 `;
 
-const RightGroup = styled(FlexRow)`
+const LeftGroup = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.xs};
+`;
+
+const RightGroup = styled(LeftGroup)`
   margin-left: auto;
+  gap: ${({ theme }) => theme.spacing.m};
 `;
 
 const DonateButton = styled.button`
@@ -57,10 +64,10 @@ export default function Header() {
   return (
     <FancyHeader $isTop={isTop}>
       <Container>
-        <FlexRow>
+        <LeftGroup>
           <Logo />
           <Logoname>Fairstofft!</Logoname>
-        </FlexRow>
+        </LeftGroup>
 
         <RightGroup>
           <DonateButton>Jetzt Kleider spenden</DonateButton>
