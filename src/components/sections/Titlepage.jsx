@@ -4,7 +4,7 @@ import TitlepageContainer from "../ui/TitlepageContainer";
 export default function Titlepage() {
 
   return (
-      <Section>
+      <Section contentWrapper={false}>
         <TitlepageContainer>
         </TitlepageContainer>
       </Section>

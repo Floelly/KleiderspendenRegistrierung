@@ -4,7 +4,7 @@ import FancyHeader from "../ui/FancyHeader";
 import NavButton from "../ui/NavButton";
 import Logo from "../ui/Logo";
 import FlexRow from "../ui/FlexRow";
-import ContentContainer from "../ui/ContentContainer";
+import { ContentContainer } from "../ui/Section.jsx";
 
 const Container = styled(ContentContainer)`
   display: flex;

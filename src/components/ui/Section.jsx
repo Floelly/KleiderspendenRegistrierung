@@ -1,5 +1,11 @@
 import styled from "styled-components"
 
+export const ContentContainer = styled.div`
+  width: clamp(60vw, 95vw, 1300px);  // In theme packen!
+  margin: 0 auto;
+  padding-block: clamp(0.1rem, 1vw, 0.5rem);
+`;
+
 const StyledSection = styled.section`
     background-color: ${({ theme}) => theme.colors.lightBg};
     color: ${({ theme}) => theme.colors.lightText };
@@ -45,12 +51,12 @@ const StyledSection = styled.section`
     }
   `
 
-const Section = ({ children, ...props }) => {
+const Section = ({ children, contentWrapper = true, ...props }) => {
 
 
   return (
       <StyledSection {...props}>
-        {children}
+        {contentWrapper ? <ContentContainer>{children}</ContentContainer> : children}
       </StyledSection>
   );
 }
