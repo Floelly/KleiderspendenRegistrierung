@@ -1,4 +1,7 @@
 import Section from "../ui/Section";
+import { GiUnderwear, GiMonclerJacket, GiConverseShoe, GiTrousers } from "react-icons/gi";
+import { PiShirtFoldedFill } from "react-icons/pi";
+import { IoShirt } from "react-icons/io5";
 
 export default function InDemandItems() {
   return (
@@ -8,27 +11,27 @@ export default function InDemandItems() {
 
       <ul>
         <li>
-          <img src="/icons/tshirt.svg" alt="T-Shirt Icon" />
+          <IoShirt alt="T-Shirt Icon" />
           <span>T-Shirts</span>
         </li>
         <li>
-          <img src="/icons/jeans.svg" alt="Jeans Icon" />
+          <GiTrousers alt="Jeans Icon" />
           <span>Jeans</span>
         </li>
         <li>
-          <img src="/icons/jacket.svg" alt="Jacke Icon" />
+          <GiMonclerJacket alt="Jacke Icon" />
           <span>Jacken</span>
         </li>
         <li>
-          <img src="/icons/shoes.svg" alt="Schuhe Icon" />
+          <GiConverseShoe alt="Schuhe Icon" />
           <span>Schuhe</span>
         </li>
         <li>
-          <img src="/icons/sweater.svg" alt="Pullover Icon" />
-          <span>Pullover</span>
+          <PiShirtFoldedFill alt="Hemden Icon" />
+          <span>Hemden</span>
         </li>
         <li>
-          <img src="/icons/underwear.svg" alt="Unterwäsche Icon" />
+          <GiUnderwear alt="Unterwäsche Icon" />
           <span>Unterwäsche (neu)</span>
         </li>
       </ul>
