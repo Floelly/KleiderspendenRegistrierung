@@ -1,4 +1,6 @@
 import Section from "../ui/Section";
+import OptionalFlexRow from "../ui/OptionalFlexRow.jsx";
+import SuccessCard from "../ui/SuccessCard.jsx";
 
 export default function Success() {
 
@@ -13,20 +15,11 @@ export default function Success() {
           </p>
         </div>
 
-        <div>
-          <div>
-            <strong>8700+</strong>
-            <span>glückliche Spender:innen</span>
-          </div>
-          <div>
-            <strong>189+</strong>
-            <span>verschiedene Spendenziele weltweit</span>
-          </div>
-          <div>
-            <strong>91.000+</strong>
-            <span>gespendete Kleidungsstücke</span>
-          </div>
-        </div>
+        <OptionalFlexRow>
+          <SuccessCard success="1900+" description="glückliche Spender:innen"/>
+          <SuccessCard success="17" description="verschiedene Spendenziele weltweit"/>
+          <SuccessCard success="17.000+" description="gespendete Kleidungsstücke"/>
+        </OptionalFlexRow>
       </Section>
     </>
   );
