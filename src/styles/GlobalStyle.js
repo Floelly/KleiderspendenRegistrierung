@@ -28,6 +28,17 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
     display: block;
   }
+
+  a {
+    text-decoration: none;
+    display:inline-block;
+    color: ${({theme}) => theme.colors.primary};
+    transition: opacity .3s ease, transform .3s ease;
+  }
+  a:hover {
+    opacity: .7;
+    transform: scale(1.05);
+  }
 `;
 
 export default GlobalStyle;
