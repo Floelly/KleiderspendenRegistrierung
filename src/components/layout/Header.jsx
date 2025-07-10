@@ -6,7 +6,7 @@ import Logo from "../ui/Logo";
 import { HeaderContainer } from "../ui/Container.jsx";
 import Navigation from "./Navigation.jsx";
 import { useLocation } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import DonateButton from "../ui/DonateButton.jsx"
 
 const Container = styled(HeaderContainer)`
   display: flex;
@@ -28,24 +28,11 @@ const RightGroup = styled(LeftGroup)`
   gap: ${({ theme }) => theme.spacing.m};
 `;
 
-const DonateButton = styled(HashLink)`
+const HeaderDonateButton = styled(DonateButton)`
   background-color: ${({ $isTop, theme }) => $isTop ? theme.colors.primary : theme.colors.dark};
-  color: inherit;
-  font-weight: 600;
-  font-size: ${({ theme }) => theme.fontSizes.body};
-  padding: ${({ theme }) => theme.spacing.s} ${({ theme }) => theme.spacing.m};
-  border: 1px solid;
-  cursor: pointer;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   transition: transform .3s ease, background-color .3s ease;
-  display: inline-block; 
-
-  &:hover {
-    transform: scale(1.05);
-    text-decoration: none;
-    opacity: 1;   
-  }
-`;
+  font-weight: 600;
+`
 
 const Logoname = styled.h1`
   margin: 0;
@@ -88,9 +75,9 @@ export default function Header() {
           </LeftGroup>
 
           <RightGroup>
-            <DonateButton to="/#registration" smooth $isTop={isTop}>
+            <HeaderDonateButton to="/#registration" smooth $isTop={isTop}>
               Jetzt Kleider spenden
-            </DonateButton>
+            </HeaderDonateButton>
             <NavButton onClick={() => setMenuOpen(true)} aria-expanded={menuOpen} />
           </RightGroup>
         </Container>

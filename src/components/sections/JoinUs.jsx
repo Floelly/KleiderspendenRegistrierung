@@ -7,6 +7,7 @@ import aboutImage from "/src/assets/About_Kleiderspende.jpg";
 import workImage from "/src/assets/joinUs_Teamarbeit.jpg";
 import memberImage from "/src/assets/joinUs_Mitgliedschaft.jpg";
 import Button from "../ui/Button.jsx";
+import DonateButton from "../ui/DonateButton.jsx";
 
 export default function JoinUs() {
 
@@ -25,7 +26,7 @@ export default function JoinUs() {
             <RoundImage src={aboutImage} alt="Foto Kleiderspende" title="Bildquelle: https://unsplash.com/photos/person-holding-white-clothes-hanger-aAVVmgod3N4" />
             <h3>Spende Kleidung</h3>
             <p>Gib deinen gut erhaltenen Kleidungsstücken ein neues Zuhause und hilf Menschen weltweit.</p>
-            <Button>Jetzt spenden</Button>
+            <DonateButton to="/#registration" smooth >Jetzt spenden</DonateButton>
           </LocationCard>
 
           <LocationCard>
