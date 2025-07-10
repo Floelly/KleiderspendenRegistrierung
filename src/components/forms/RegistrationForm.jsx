@@ -7,8 +7,12 @@ import { FaTruckFast } from "react-icons/fa6";
 import { TbBuildingStore } from "react-icons/tb";
 import { zodResolver } from '@hookform/resolvers/zod';
 import schema from './RegistrationSchema.js';
+import locations from '/src/assets/donationLocations.json'
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+const sortedLocations = [...new Set(locations)]
+  .sort((a, b) => a.localeCompare(b, 'de', { sensitivity: 'base' }));
 
 const FormGrid = styled.form`
   display: flex;
@@ -203,10 +207,12 @@ export default function RegistrationForm({ onSuccess }) {
         <span>Krisengebiet</span>
         <Select required {...register('region')}>
           <option value="" disabled>Bitte wählen …</option>
-          <option value="Ukraine">Ukraine</option>
-          <option value="Gaza">Gaza</option>
-          <option value="Sudan">Sudan</option>
-          <option value="Afghanistan">Afghanistan</option>
+          <option value="-- Wo Bedarf ist --">-- Wo Bedarf ist --</option>
+          {sortedLocations.map(loc => (
+            <option key={loc} value={loc}>
+              {loc}
+            </option>
+          ))}
         </Select>
       </GridLabel>
       {errors.region && <ErrorP>{errors.region.message}</ErrorP>}
