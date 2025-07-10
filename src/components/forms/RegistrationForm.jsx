@@ -43,6 +43,9 @@ const ModeWrapper = styled.div`
     text-align: center;
 `
 
+const RadioWrapper = styled.div`
+`
+
 const HiddenRadio = styled.input.attrs({ type: 'radio' })`
   position: absolute;
   opacity: 0;
@@ -103,26 +106,30 @@ export default function RegistrationForm({ onSuccess }) {
         <h2>Jetzt registrieren und Kleider spenden</h2>
         {/* 1) Modus */}
         <ModeWrapper>
-            <HiddenRadio
-                id="handover"
-                value="Übergabe an Geschäftsstelle"
-                {...register('mode')}
+            <RadioWrapper>
+                <HiddenRadio
+                    id="handover"
+                    value="Übergabe an Geschäftsstelle"
+                    {...register('mode')}
+                name="mode"
+                    />
+                <RadioLabel htmlFor="handover">
+                    <IconWrapper><TbBuildingStore /></IconWrapper>
+                    <span>Übergabe an Geschäftsstelle</span>
+                </RadioLabel>
+            </RadioWrapper>
+            <RadioWrapper>
+                <HiddenRadio
+                    id="pickup"
+                    value="Abholung (Sammelfahrzeug)"
+                    {...register('mode')}
                 name="mode"
                 />
-            <RadioLabel htmlFor="handover">
-                <IconWrapper><TbBuildingStore /></IconWrapper>
-                <span>Übergabe an Geschäftsstelle</span>
-            </RadioLabel>
-            <HiddenRadio
-                id="pickup"
-                value="Abholung (Sammelfahrzeug)"
-                {...register('mode')}
-                name="mode"
-            />
-            <RadioLabel htmlFor="pickup">
-                <IconWrapper><FaTruckFast/></IconWrapper>
-                <span>Abholung (Sammelfahrzeug)</span>
-            </RadioLabel>
+                <RadioLabel htmlFor="pickup">
+                    <IconWrapper><FaTruckFast/></IconWrapper>
+                    <span>Abholung (Sammelfahrzeug)</span>
+                </RadioLabel>
+            </RadioWrapper>
         </ModeWrapper>
 
       { /* 1.5) Adress */
