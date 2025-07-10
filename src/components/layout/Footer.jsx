@@ -74,7 +74,7 @@ export default function Footer() {
         </CardGrid>
 
         <FooterBottom>
-          © 2025 Fairstofft! – Diese Website entstand im Rahmen einer Modulabschlussarbeit an der IU Erfurt.
+          © 2025 FAIRSTOFFT! – Diese Website entstand im Rahmen einer Modulabschlussarbeit an der IU Erfurt.
         </FooterBottom>
       </ContentContainer>
     </StyledFooter>

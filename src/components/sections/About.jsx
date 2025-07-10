@@ -21,7 +21,7 @@ export default function About() {
           <div>
             <h2>Wohin mit gut erhaltener Kleidung? Wir kümmern uns darum – weltweit.</h2>
             <p>
-              Du willst Platz schaffen im Kleiderschrank und gleichzeitig Gutes tun? Bei <strong>Fairstofft!</strong> aus Frankfurt kannst du ganz einfach deine Kleiderspende mit einem Wunschziel auf der ganzen Welt verbinden. Ob nach Ghana, Indien, Rumänien oder in die Ukraine – wir bringen deine Kleidung genau dorthin, wo sie gebraucht wird.
+              Du willst Platz schaffen im Kleiderschrank und gleichzeitig Gutes tun? Bei <strong>FAIRSTOFFT!</strong> aus Frankfurt kannst du ganz einfach deine Kleiderspende mit einem Wunschziel auf der ganzen Welt verbinden. Ob nach Ghana, Indien, Rumänien oder in die Ukraine – wir bringen deine Kleidung genau dorthin, wo sie gebraucht wird.
             </p>
             <p>
               Egal ob du sie persönlich bei uns in Frankfurt vorbeibringst, sie per Post an uns versendest oder unseren kostenlosen Abholservice in deiner Nähe nutzt – der Weg deiner Spende ist einfach, transparent und sinnvoll.

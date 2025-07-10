@@ -20,6 +20,7 @@ const LeftGroup = styled.div`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.xs};
+  user-select: none;
 `;
 
 const RightGroup = styled(LeftGroup)`
