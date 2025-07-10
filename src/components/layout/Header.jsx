@@ -4,6 +4,7 @@ import FancyHeader from "../ui/FancyHeader";
 import NavButton from "../ui/NavButton";
 import Logo from "../ui/Logo";
 import { HeaderContainer } from "../ui/Container.jsx";
+import Button from "../ui/Button.jsx";
 
 const Container = styled(HeaderContainer)`
   display: flex;
@@ -24,19 +25,11 @@ const RightGroup = styled(LeftGroup)`
   gap: ${({ theme }) => theme.spacing.m};
 `;
 
-const DonateButton = styled.button`
-  background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.light};
-  border: 1px solid ${({ theme }) => theme.colors.light};
-  padding: ${({ theme }) => theme.spacing.s} ${({ theme }) => theme.spacing.m};
-  cursor: pointer;
+const DonateButton = styled(Button)`
+  background-color: ${({ $isTop, theme }) => $isTop? theme.colors.primary : theme.colors.dark};
   font-weight: 600;
   font-size: ${({ theme }) => theme.fontSizes.body};
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-
-  &:hover {
-    transform: scale(1.05);
-  }
+  transition: background-color .3s ease;
 `;
 
 const Logoname = styled.h1`
@@ -70,7 +63,7 @@ export default function Header() {
         </LeftGroup>
 
         <RightGroup>
-          <DonateButton>Jetzt Kleider spenden</DonateButton>
+          <DonateButton $isTop={isTop}>Jetzt Kleider spenden</DonateButton>
           <NavButton />
         </RightGroup>
       </Container>

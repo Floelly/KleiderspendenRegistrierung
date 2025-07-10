@@ -3,15 +3,16 @@ import RoundImage from "../ui/RoundImage";
 import aboutImage from "/src/assets/About_Kleiderspende.jpg";
 import styled from "styled-components";
 
+const SideBySide = styled.div`
+  @media screen AND (min-width: ${({ theme }) => theme.breakpoints.l}) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: ${({ theme }) => theme.spacing.l};
+  }
+`;
+
 export default function About() {
-  const SideBySide = styled.div`
-    @media screen AND (min-width: ${({ theme }) => theme.breakpoints.l}) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: ${({ theme }) => theme.spacing.l};
-    }
-  `;
 
   return (
     <>

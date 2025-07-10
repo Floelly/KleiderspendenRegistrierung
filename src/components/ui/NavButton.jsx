@@ -10,6 +10,7 @@ const IconButton = styled(IoMenuSharp )`
   justify-content: center;
   width: ${({ theme }) => theme.sizes.iconSize};
   height: ${({ theme }) => theme.sizes.iconSize};
+  transition: transform .3s ease;
 
   &:hover {
     transform: scale(1.1);

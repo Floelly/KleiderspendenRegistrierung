@@ -6,6 +6,7 @@ import RoundImage from "../ui/RoundImage";
 import LocationCard from "../ui/LocationCard";
 import CardGrid from "../ui/CardGrid";
 import CenteredText from "../ui/CenteredText";
+import Button from "../ui/Button";
 
 export default function DonationLocation() {
 
@@ -44,7 +45,7 @@ export default function DonationLocation() {
         </CardGrid>
 
         <div style={{ textAlign: "right" }}>
-          <button type="button">Weitere Spendenorte entdecken</button>
+          <Button type="button">Weitere Spendenorte entdecken</Button>
         </div>
       </Section>
     </>
