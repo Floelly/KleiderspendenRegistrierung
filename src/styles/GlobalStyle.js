@@ -38,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
   a:hover {
     opacity: .7;
     transform: scale(1.05);
+    text-decoration: underline;
   }
 `;
 
