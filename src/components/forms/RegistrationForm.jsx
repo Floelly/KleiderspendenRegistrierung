@@ -114,7 +114,6 @@ export default function RegistrationForm({ onSuccess }) {
                 id="handover"
                 value="Übergabe an Geschäftsstelle"
                 {...register('mode')}
-                name="mode"
                 />
             <RadioLabel htmlFor="handover">
                 <IconWrapper><TbBuildingStore /></IconWrapper>
@@ -124,7 +123,6 @@ export default function RegistrationForm({ onSuccess }) {
                 id="pickup"
                 value="Abholung (Sammelfahrzeug)"
                 {...register('mode')}
-                name="mode"
             />
             <RadioLabel htmlFor="pickup">
                 <IconWrapper><FaTruckFast/></IconWrapper>
