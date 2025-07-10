@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   
-  z-index: 10;
+  z-index: ${({theme}) => theme.zIndex.header || 10};
 
   //TODO: überdenken
   background-color: ${({$isTop, theme}) => ($isTop ? "transparent" : theme.colors.primary)};
