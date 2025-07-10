@@ -4,7 +4,7 @@ export default function Registration() {
 
   return (
     <>
-      <Section>
+      <Section id="registration">
         <h1>Section Registration</h1>
       </Section>
     </>

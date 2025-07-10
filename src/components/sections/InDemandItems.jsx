@@ -8,7 +8,7 @@ import CardGrid from "../ui/CardGrid";
 
 export default function InDemandItems() {
   return (
-    <Section>
+    <Section id="in-demand-items">
       <CenteredText>
         <h2>Besonders gefragt</h2>
         <p>Diese Kleidungsstücke werden aktuell besonders häufig benötigt:</p>

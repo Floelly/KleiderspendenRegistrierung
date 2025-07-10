@@ -6,6 +6,7 @@ import Logo from "../ui/Logo";
 import { HeaderContainer } from "../ui/Container.jsx";
 import Button from "../ui/Button.jsx";
 import Navigation from "./Navigation.jsx";
+import { useLocation } from "react-router-dom";
 
 const Container = styled(HeaderContainer)`
   display: flex;
@@ -43,7 +44,10 @@ const Logoname = styled.h1`
 
 export default function Header() {
   const [isTop, setIsTop] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
+  // Scroll info für header
   useEffect(() => {
     const onScroll = () => {
       setIsTop(window.scrollY < 50);
@@ -54,10 +58,15 @@ export default function Header() {
       window.removeEventListener("scroll", onScroll);
     };
   }, []);
-  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Schließt navigation beim Route‑/Hash‑Wechsel
+  useEffect(() => {
+    if (menuOpen) setMenuOpen(false);
+  }, [location]); 
 
   return (
     <>
+      <div id="top"></div>
       <FancyHeader $isTop={isTop}>
         <Container>
           <LeftGroup>

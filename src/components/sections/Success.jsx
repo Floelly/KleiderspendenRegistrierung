@@ -7,7 +7,7 @@ export default function Success() {
 
   return (
     <>
-      <Section>
+      <Section id="success">
         <CenteredText>
           <h2>Unser gemeinsamer Erfolg</h2>
           <p>

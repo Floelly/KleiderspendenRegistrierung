@@ -6,10 +6,12 @@ const StyledSection = styled.section`
     color: ${({ theme}) => theme.colors.dark };
     position: relative;
     min-height: ${({ theme }) => theme.sizes.section.minHeight};
+    scroll-margin-top: calc(var(--header-min-height) * 2);
 
     &:nth-child(odd) {
       background-color: ${({ theme}) => theme.colors.dark};
       color: ${({ theme}) => theme.colors.light};
+      scroll-margin-top: calc(var(--header-min-height) * 2  - var(--section-triangle-top-height));
     }
 
     &:not(:first-child):nth-child(odd) {

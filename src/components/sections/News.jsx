@@ -9,7 +9,7 @@ export default function News() {
 
   return (
     <>
-      <Section>
+      <Section id="news">
         <h2>Neuigkeiten & Geschichten</h2>
 
         <CardGrid>

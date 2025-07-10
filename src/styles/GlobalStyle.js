@@ -5,6 +5,11 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  :root {
+    --section-triangle-top-height: ${({theme}) => theme.sizes.section.triangleTop};
+    --header-min-height: ${({theme}) => theme.sizes.header.small}
+  }
+
   body {
     margin: 0;
     font-family: ${({ theme }) => theme.fonts.body};

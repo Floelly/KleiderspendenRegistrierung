@@ -11,7 +11,7 @@ import Button from "../ui/Button.jsx";
 export default function JoinUs() {
 
   return (
-    <Section>
+    <Section id="join-us">
       <div>
         <CenteredText>
           <h2>Werde Teil der Bewegung</h2>

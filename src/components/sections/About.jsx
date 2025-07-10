@@ -16,7 +16,7 @@ export default function About() {
 
   return (
     <>
-      <Section>
+      <Section id="about">
         <SideBySide>
           <div>
             <h2>Wohin mit gut erhaltener Kleidung? Wir kümmern uns darum – weltweit.</h2>

@@ -12,7 +12,7 @@ export default function DonationLocation() {
 
   return (
     <>
-      <Section>
+      <Section id="donation-locations">
         <CenteredText>
           <h2>Spendenziele weltweit</h2>
           <p>Unsere Kleiderspenden erreichen Menschen in über 189 Regionen – unter anderem hier:</p>
