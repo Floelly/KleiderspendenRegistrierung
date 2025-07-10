@@ -29,7 +29,7 @@ const DonateButton = styled(Button)`
   background-color: ${({ $isTop, theme }) => $isTop? theme.colors.primary : theme.colors.dark};
   font-weight: 600;
   font-size: ${({ theme }) => theme.fontSizes.body};
-  transition: background-color .3s ease;
+  transition: transform .3s ease, background-color .3s ease;
 `;
 
 const Logoname = styled.h1`
