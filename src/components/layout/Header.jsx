@@ -5,6 +5,7 @@ import NavButton from "../ui/NavButton";
 import Logo from "../ui/Logo";
 import { HeaderContainer } from "../ui/Container.jsx";
 import Button from "../ui/Button.jsx";
+import Navigation from "./Navigation.jsx";
 
 const Container = styled(HeaderContainer)`
   display: flex;
@@ -53,20 +54,24 @@ export default function Header() {
       window.removeEventListener("scroll", onScroll);
     };
   }, []);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <FancyHeader $isTop={isTop}>
-      <Container>
-        <LeftGroup>
-          <Logo />
-          <Logoname>Fairstofft!</Logoname>
-        </LeftGroup>
+    <>
+      <FancyHeader $isTop={isTop}>
+        <Container>
+          <LeftGroup>
+            <Logo />
+            <Logoname>Fairstofft!</Logoname>
+          </LeftGroup>
 
-        <RightGroup>
-          <DonateButton $isTop={isTop}>Jetzt Kleider spenden</DonateButton>
-          <NavButton />
-        </RightGroup>
-      </Container>
-    </FancyHeader>
+          <RightGroup>
+            <DonateButton $isTop={isTop}>Jetzt Kleider spenden</DonateButton>
+            <NavButton onClick={() => setMenuOpen(true)} aria-expanded={menuOpen} />
+          </RightGroup>
+        </Container>
+      </FancyHeader>
+      <Navigation open={menuOpen} onClose={() => setMenuOpen(false)} />
+    </>
   );
 }

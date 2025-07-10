@@ -15,6 +15,7 @@ export const Theme = {
     },
     footerMinHeight: '20vh',
     titlePageHeight: '90vh',
+    navModalWidth: 'clamp(280px, 90vw, 40vw)',
     logoSize: 'clamp(1.1rem, 11vw, 5.5rem)',
     iconSize: 'clamp(1rem, 10vw, 5rem)',
     section: {
@@ -51,7 +52,7 @@ export const Theme = {
     contentOverlay: 5,
     header: 10,
     footer: 10,
-    modal: 100,
+    navigation: 100,
     tooltip: 200
   }
 };
