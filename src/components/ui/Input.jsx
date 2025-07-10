@@ -8,7 +8,8 @@ const Input = styled.input`
   transition: border-color 0.3s ease;
   outline-offset: 2px;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     border-color: ${({ theme }) => theme.colors.primary};
     outline: 2px solid ${({ theme }) => theme.colors.primaryLight};
   }
