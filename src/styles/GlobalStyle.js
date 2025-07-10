@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -6,8 +6,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-    --section-triangle-top-height: ${({theme}) => theme.sizes.section.triangleTop};
-    --header-min-height: ${({theme}) => theme.sizes.header.small}
+    --section-triangle-top-height: ${({ theme }) => theme.sizes.section.triangleTop};
+    --header-min-height: ${({ theme }) => theme.sizes.header.small}
   }
 
   body {
@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     display:inline-block;
-    color: ${({theme}) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
     transition: opacity .3s ease, transform .3s ease;
   }
   a:hover {

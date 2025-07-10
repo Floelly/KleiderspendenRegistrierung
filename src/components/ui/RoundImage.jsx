@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const ImageWrapper = styled.div`
   aspect-ratio: 1 / 1;
   width: ${({ $width }) => $width || "90%"};
   border-radius: 50%;
   overflow: hidden;
-  margin: ${({theme}) => theme.spacing.m} auto;
+  margin: ${({ theme }) => theme.spacing.m} auto;
 `;
 
 const StyledImg = styled.img`

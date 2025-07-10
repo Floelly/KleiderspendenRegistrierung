@@ -9,37 +9,54 @@ import CenteredText from "../ui/CenteredText";
 import Button from "../ui/Button";
 
 export default function DonationLocation() {
-
   return (
     <>
       <Section id="donation-locations">
         <CenteredText>
           <h2>Spendenziele weltweit</h2>
-          <p>Unsere Kleiderspenden erreichen Menschen in über 189 Regionen – unter anderem hier:</p>
+          <p>
+            Unsere Kleiderspenden erreichen Menschen in über 189 Regionen –
+            unter anderem hier:
+          </p>
         </CenteredText>
 
         <CardGrid>
           <LocationCard>
-            <RoundImage src={kapstadtImage} alt="Kapstadt, Südafrika" title="Bildquelle: https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-HwFJlomisJ4"/>
+            <RoundImage
+              src={kapstadtImage}
+              alt="Kapstadt, Südafrika"
+              title="Bildquelle: https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-HwFJlomisJ4"
+            />
             <h3>Kapstadt, Südafrika</h3>
             <p>
-              In Zusammenarbeit mit lokalen Organisationen versorgen wir Bedürftige in den Townships mit warmer Kleidung.
+              In Zusammenarbeit mit lokalen Organisationen versorgen wir
+              Bedürftige in den Townships mit warmer Kleidung.
             </p>
           </LocationCard>
 
           <LocationCard>
-            <RoundImage src={manilaImage} alt="Manila, Philippinen" title="Bildquelle: https://unsplash.com/photos/woman-in-black-tank-top-and-black-pants-holding-umbrella-standing-beside-green-car-during-daytime--bMWUB5_Lj8" />
+            <RoundImage
+              src={manilaImage}
+              alt="Manila, Philippinen"
+              title="Bildquelle: https://unsplash.com/photos/woman-in-black-tank-top-and-black-pants-holding-umbrella-standing-beside-green-car-during-daytime--bMWUB5_Lj8"
+            />
             <h3>Manila, Philippinen</h3>
             <p>
-              In den dicht besiedelten Vororten unterstützen wir Familien mit sauberer, intakter Kleidung für Alltag und Schule.
+              In den dicht besiedelten Vororten unterstützen wir Familien mit
+              sauberer, intakter Kleidung für Alltag und Schule.
             </p>
           </LocationCard>
 
           <LocationCard>
-            <RoundImage src={ukraineImage} alt="Lwiw, Ukraine" title="Bildquelle: https://unsplash.com/photos/a-pile-of-rubble-sitting-next-to-a-building-81Dc3H1iipk" />
+            <RoundImage
+              src={ukraineImage}
+              alt="Lwiw, Ukraine"
+              title="Bildquelle: https://unsplash.com/photos/a-pile-of-rubble-sitting-next-to-a-building-81Dc3H1iipk"
+            />
             <h3>Lwiw, Ukraine</h3>
             <p>
-              Seit 2022 liefern wir regelmäßig Kleidung an Hilfszentren im Westen der Ukraine für Geflüchtete und Bedürftige.
+              Seit 2022 liefern wir regelmäßig Kleidung an Hilfszentren im
+              Westen der Ukraine für Geflüchtete und Bedürftige.
             </p>
           </LocationCard>
         </CardGrid>

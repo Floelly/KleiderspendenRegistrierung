@@ -1,5 +1,10 @@
 import Section from "../ui/Section";
-import { GiUnderwear, GiMonclerJacket, GiConverseShoe, GiTrousers } from "react-icons/gi";
+import {
+  GiUnderwear,
+  GiMonclerJacket,
+  GiConverseShoe,
+  GiTrousers,
+} from "react-icons/gi";
 import { PiShirtFoldedFill } from "react-icons/pi";
 import { IoShirt } from "react-icons/io5";
 import CenteredText from "../ui/CenteredText";

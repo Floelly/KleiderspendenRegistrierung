@@ -6,7 +6,7 @@ import Logo from "../ui/Logo";
 import { HeaderContainer } from "../ui/Container.jsx";
 import Navigation from "./Navigation.jsx";
 import { useLocation } from "react-router-dom";
-import DonateButton from "../ui/DonateButton.jsx"
+import DonateButton from "../ui/DonateButton.jsx";
 
 const Container = styled(HeaderContainer)`
   display: flex;
@@ -29,10 +29,13 @@ const RightGroup = styled(LeftGroup)`
 `;
 
 const HeaderDonateButton = styled(DonateButton)`
-  background-color: ${({ $isTop, theme }) => $isTop ? theme.colors.primary : theme.colors.dark};
-  transition: transform .3s ease, background-color .3s ease;
+  background-color: ${({ $isTop, theme }) =>
+    $isTop ? theme.colors.primary : theme.colors.dark};
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
   font-weight: 600;
-`
+`;
 
 const Logoname = styled.h1`
   margin: 0;
@@ -62,7 +65,7 @@ export default function Header() {
   // Schließt navigation beim Route‑/Hash‑Wechsel
   useEffect(() => {
     if (menuOpen) setMenuOpen(false);
-  }, [location]); 
+  }, [location]);
 
   return (
     <>
@@ -78,7 +81,10 @@ export default function Header() {
             <HeaderDonateButton to="/#registration" smooth $isTop={isTop}>
               Jetzt Kleider spenden
             </HeaderDonateButton>
-            <NavButton onClick={() => setMenuOpen(true)} aria-expanded={menuOpen} />
+            <NavButton
+              onClick={() => setMenuOpen(true)}
+              aria-expanded={menuOpen}
+            />
           </RightGroup>
         </Container>
       </FancyHeader>

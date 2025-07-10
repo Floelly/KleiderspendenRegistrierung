@@ -9,9 +9,16 @@ export default function Registration() {
   return (
     <>
       <Section id="registration">
-        {submittedData ? 
-          <ConfirmRegistration data={submittedData} onNew={() => setSubmittedData(null)}>Registration Confirmation</ConfirmRegistration>
-        : <RegistrationForm onSuccess={setSubmittedData}/>}
+        {submittedData ? (
+          <ConfirmRegistration
+            data={submittedData}
+            onNew={() => setSubmittedData(null)}
+          >
+            Registration Confirmation
+          </ConfirmRegistration>
+        ) : (
+          <RegistrationForm onSuccess={setSubmittedData} />
+        )}
       </Section>
     </>
   );

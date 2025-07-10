@@ -9,13 +9,13 @@ const DonateButton = styled(HashLink)`
   border: 1px solid;
   cursor: pointer;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  transition: transform .3s ease;
-  display: inline-block; 
+  transition: transform 0.3s ease;
+  display: inline-block;
 
   &:hover {
     transform: scale(1.05);
     text-decoration: none;
-    opacity: 1;   
+    opacity: 1;
   }
 `;
 export default DonateButton;

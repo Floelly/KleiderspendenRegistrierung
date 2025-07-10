@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { IoMenuSharp  } from "react-icons/io5";
+import styled from "styled-components";
+import { IoMenuSharp } from "react-icons/io5";
 
-const IconButton = styled(IoMenuSharp )`
+const IconButton = styled(IoMenuSharp)`
   background: transparent;
   border: none;
   cursor: pointer;
@@ -10,7 +10,7 @@ const IconButton = styled(IoMenuSharp )`
   justify-content: center;
   width: ${({ theme }) => theme.sizes.iconSize};
   height: ${({ theme }) => theme.sizes.iconSize};
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 
   &:hover {
     transform: scale(1.1);

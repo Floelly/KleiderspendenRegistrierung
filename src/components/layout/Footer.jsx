@@ -5,11 +5,10 @@ import StyledFooter from "../ui/FancyFooter";
 import styled from "styled-components";
 
 const FooterSection = styled.div`
-
   h3 {
-    font-size: ${({theme}) => theme.fontSizes.small};
-    opacity: .6;
-    margin-bottom: ${({theme}) => theme.spacing.s};
+    font-size: ${({ theme }) => theme.fontSizes.small};
+    opacity: 0.6;
+    margin-bottom: ${({ theme }) => theme.spacing.s};
   }
 
   ul {
@@ -17,19 +16,20 @@ const FooterSection = styled.div`
     padding: 0;
   }
 
-  p, a {
+  p,
+  a {
     color: inherit;
     margin: 0;
-    font-size: ${({theme}) => theme.fontSizes.small};
+    font-size: ${({ theme }) => theme.fontSizes.small};
   }
 `;
 
 const FooterBottom = styled.div`
-  margin-top: ${({theme}) => theme.spacing.l};
+  margin-top: ${({ theme }) => theme.spacing.l};
   text-align: center;
-  font-size: ${({theme}) => theme.fontSizes.copyright};
-  color: ${({ theme }) => theme.colors.dark || '#111'};
-  opacity: .6 ;
+  font-size: ${({ theme }) => theme.fontSizes.copyright};
+  color: ${({ theme }) => theme.colors.dark || "#111"};
+  opacity: 0.6;
 `;
 
 export default function Footer() {
@@ -40,8 +40,12 @@ export default function Footer() {
           <FooterSection>
             <h3>Rechtliches</h3>
             <ul>
-              <li><HashLink to="/impressum#top">Impressum</HashLink></li>
-              <li><HashLink to="/datenschutz#top">Datenschutz</HashLink></li>
+              <li>
+                <HashLink to="/impressum#top">Impressum</HashLink>
+              </li>
+              <li>
+                <HashLink to="/datenschutz#top">Datenschutz</HashLink>
+              </li>
             </ul>
           </FooterSection>
 
@@ -54,10 +58,14 @@ export default function Footer() {
                 <p>60313 Frankfurt</p>
               </li>
               <li>
-                <p><a href="tel:+496912345678">+49 69 12345678</a></p>
+                <p>
+                  <a href="tel:+496912345678">+49 69 12345678</a>
+                </p>
               </li>
               <li>
-                <p><a href="mailto:info@fairstofft.de">info@fairstofft.de</a></p>
+                <p>
+                  <a href="mailto:info@fairstofft.de">info@fairstofft.de</a>
+                </p>
               </li>
             </ul>
           </FooterSection>
@@ -65,16 +73,33 @@ export default function Footer() {
           <FooterSection>
             <h3>Navigation</h3>
             <ul>
-              <li><HashLink smooth to="/#top">Home</HashLink></li>
-              <li><HashLink smooth to="/#about">Über uns</HashLink></li>
-              <li><HashLink smooth to="/#donation-locations">Wohin wird gespendet</HashLink></li>
-              <li><HashLink smooth to="/#registration">Jetzt Kleider spenden</HashLink></li>
+              <li>
+                <HashLink smooth to="/#top">
+                  Home
+                </HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="/#about">
+                  Über uns
+                </HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="/#donation-locations">
+                  Wohin wird gespendet
+                </HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="/#registration">
+                  Jetzt Kleider spenden
+                </HashLink>
+              </li>
             </ul>
           </FooterSection>
         </CardGrid>
 
         <FooterBottom>
-          © 2025 FAIRSTOFFT! – Diese Website entstand im Rahmen einer Modulabschlussarbeit an der IU Erfurt.
+          © 2025 FAIRSTOFFT! – Diese Website entstand im Rahmen einer
+          Modulabschlussarbeit an der IU Erfurt.
         </FooterBottom>
       </ContentContainer>
     </StyledFooter>
