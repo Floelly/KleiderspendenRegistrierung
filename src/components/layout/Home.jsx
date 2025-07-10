@@ -7,7 +7,7 @@ import InDemandItems from "../sections/InDemandItems";
 import Registration from "../sections/Registration";
 import JoinUs from "../sections/JoinUs";
 
-export default function Main() {
+export default function Home() {
   let sectionCounter = 0;
 
   return (
