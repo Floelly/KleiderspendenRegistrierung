@@ -101,6 +101,10 @@ export default function RegistrationForm({ onSuccess }) {
     };
 
     onSuccess(stamped);
+
+    //an den Anfang der Section scrollen
+    const el = document.getElementById('registration');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   const mode = watch('mode');
