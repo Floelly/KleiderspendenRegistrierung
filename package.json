@@ -14,12 +14,15 @@
     "test:coverage:watch": "vitest --reporter verbose --coverage --watch"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-hook-form": "^7.60.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.6.3",
     "react-router-hash-link": "^2.4.3",
-    "styled-components": "^6.1.19"
+    "styled-components": "^6.1.19",
+    "zod": "^4.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
