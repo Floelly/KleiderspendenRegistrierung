@@ -17,8 +17,8 @@ export default function Navigation({open, onClose}) {
               <li><HashLink smooth to="/#news">News</HashLink></li>
               <li><HashLink smooth to="/#registration">Jetzt Kleider spenden</HashLink></li>
               <li><HashLink smooth to="/#join-us">Werde Teil des Teams</HashLink></li>
-              <li><HashLink smooth to="/impressum">Impressum</HashLink></li>
-              <li><HashLink smooth to="/datenschutz">Datenschutzerklärung</HashLink></li>
+              <li><HashLink smooth to="/impressum#top">Impressum</HashLink></li>
+              <li><HashLink smooth to="/datenschutz#top">Datenschutzerklärung</HashLink></li>
               <li style={{marginLeft: 'auto'}}><Button onClick={onClose}>Schließen</Button></li>
             </ul>
         </NavModal>
