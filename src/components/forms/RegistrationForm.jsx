@@ -1,11 +1,23 @@
 import { useForm } from 'react-hook-form';
 
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
 export default function RegistrationForm({ onSuccess }) {
   const { register, handleSubmit, watch } = useForm({
     defaultValues: { mode: 'handover' },
   });
 
-  const onSubmit = (data) => onSuccess(data);
+
+  const onSubmit = async (data) => {
+    await sleep(1000);
+
+    const stamped = {
+      ...data,
+      createdAt: new Date().toISOString(),
+    };
+
+    onSuccess(stamped);
+  };
 
   //const mode = watch('mode'); // später für Conditional Fields
 
