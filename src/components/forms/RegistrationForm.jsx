@@ -57,8 +57,6 @@ const HiddenRadio = styled.input.attrs({ type: 'radio' })`
 
 const RadioLabel = styled.label`
   display: block;
-  //align-items: center;
-  //gap: ${({theme}) => theme.spacing.xs};
   padding: ${({theme}) => theme.spacing.s} ${({theme}) => theme.spacing.m};
   border: 1px solid;
   cursor: pointer;
