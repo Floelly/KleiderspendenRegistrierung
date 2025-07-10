@@ -5,6 +5,8 @@ import Input from '../ui/Input.jsx';
 import styled from 'styled-components';
 import { FaTruckFast } from "react-icons/fa6";
 import { TbBuildingStore } from "react-icons/tb";
+import { zodResolver } from '@hookform/resolvers/zod';
+import schema from './RegistrationSchema.js';
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
@@ -73,8 +75,15 @@ const IconWrapper = styled.p`
     font-size: ${({theme}) => theme.sizes.iconSize};
 `
 
+const ErrorP = styled.p`
+  color: ${({theme}) => theme.colors.primary};
+  margin-top: 0;
+  text-align: center;
+`
+
 export default function RegistrationForm({ onSuccess }) {
-  const { register, handleSubmit, watch } = useForm({
+  const { register, handleSubmit, watch, formState: {errors} } = useForm({
+    resolver: zodResolver(schema),
     defaultValues: { 
         mode: 'Übergabe an Geschäftsstelle',
         clothes: '',
@@ -97,7 +106,7 @@ export default function RegistrationForm({ onSuccess }) {
   const mode = watch('mode');
 
   return (
-    <FormGrid onSubmit={handleSubmit(onSubmit)}>
+    <FormGrid noValidate onSubmit={handleSubmit(onSubmit)}>
         <h2>Jetzt registrieren und Kleider spenden</h2>
         {/* 1) Modus */}
         <ModeWrapper>
@@ -122,45 +131,53 @@ export default function RegistrationForm({ onSuccess }) {
                 <span>Abholung (Sammelfahrzeug)</span>
             </RadioLabel>
         </ModeWrapper>
+        {errors.mode && <ErrorP>{errors.mode.message}</ErrorP>}
 
       { /* 1.5) Adress */
       mode === 'Abholung (Sammelfahrzeug)' && (
         <>
-            <GridLabel>
-                <span>Postleitzahl</span>
-                <Input 
-                    type="text"
-                    inputMode='numeric'
-                    pattern="\d{5}"
-                    maxLength={5}
-                    required 
-                    {...register('postalCode')} 
-                    placeholder="PLZ" />
-            </GridLabel>
-            <GridLabel>
-                <span>Straße</span>
-                <Input 
-                    type="text" 
-                    required
-                    {...register('street')} 
-                    placeholder="Straße" />
-            </GridLabel>
-            <GridLabel>
-                <span>Hausnummer</span>
-                <Input 
-                    type="text" 
-                    pattern="^[0-9]{1,4}[a-zA-Z]?(-[0-9]{1,4})?$"
-                    required
-                    {...register('houseNumber')} 
-                    placeholder="Hausnummer" />
-            </GridLabel>
-            <GridLabel>
-                <span>Zusatzbemerkung</span>
-                <Input 
-                    type="text" 
-                    {...register('additionalInfo')} 
-                    placeholder="z.B. 3. Stock, links" />
-            </GridLabel>
+          <GridLabel>
+            <span>Postleitzahl</span>
+            <Input 
+              type="text"
+              inputMode='numeric'
+              pattern="\d{5}"
+              maxLength={5}
+              required 
+              {...register('postalCode')} 
+              placeholder="PLZ" />
+          </GridLabel>
+          {errors.postalCode && <ErrorP>{errors.postalCode.message}</ErrorP>}
+
+          <GridLabel>
+            <span>Straße</span>
+            <Input 
+              type="text" 
+              required
+              {...register('street')} 
+              placeholder="Straße" />
+          </GridLabel>
+          {errors.street && <ErrorP>{errors.street.message}</ErrorP>}
+
+          <GridLabel>
+            <span>Hausnummer</span>
+            <Input 
+              type="text" 
+              pattern="^[0-9]{1,4}[a-zA-Z]?(-[0-9]{1,4})?$"
+              required
+              {...register('houseNumber')} 
+              placeholder="Hausnummer" />
+          </GridLabel>
+          {errors.houseNumber && <ErrorP>{errors.houseNumber.message}</ErrorP>}
+          
+          <GridLabel>
+            <span>Zusatzbemerkung</span>
+            <Input 
+              type="text" 
+              {...register('additionalInfo')} 
+              placeholder="z.B. 3. Stock, links" />
+          </GridLabel>
+          {errors.additionalInfo && <ErrorP>{errors.additionalInfo.message}</ErrorP>}
         </>
       )}
 
@@ -177,6 +194,7 @@ export default function RegistrationForm({ onSuccess }) {
           <option value="Gemischte Kleiderspende">Gemischte Kleiderspende</option>
         </Select>
       </GridLabel>
+      {errors.clothes && <ErrorP>{errors.clothes.message}</ErrorP>}
 
       {/* 3) Krisenregion */}
       <GridLabel>
@@ -189,6 +207,7 @@ export default function RegistrationForm({ onSuccess }) {
           <option value="Afghanistan">Afghanistan</option>
         </Select>
       </GridLabel>
+      {errors.region && <ErrorP>{errors.region.message}</ErrorP>}
 
       <Button type="submit">Weiter</Button>
     </FormGrid>
