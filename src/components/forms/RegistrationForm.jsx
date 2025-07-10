@@ -78,7 +78,7 @@ const IconWrapper = styled.p`
 export default function RegistrationForm({ onSuccess }) {
   const { register, handleSubmit, watch } = useForm({
     defaultValues: { 
-        mode: 'handover',
+        mode: 'Übergabe an Geschäftsstelle',
         clothes: '',
         region: '',
     },
@@ -105,7 +105,7 @@ export default function RegistrationForm({ onSuccess }) {
         <ModeWrapper>
             <HiddenRadio
                 id="handover"
-                value="handover"
+                value="Übergabe an Geschäftsstelle"
                 {...register('mode')}
                 name="mode"
                 />
