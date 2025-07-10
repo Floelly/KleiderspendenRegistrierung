@@ -3,8 +3,10 @@ export default function Confirmation({ data, onNew }) {
     mode,
     clothes,
     region,
-    address,
-    plz,
+    street,
+    houseNumber,
+    postalCode,
+    additionalInfo,
     createdAt,          // neuer Zeitstempel
   } = data;
 
@@ -18,8 +20,9 @@ export default function Confirmation({ data, onNew }) {
         <li><strong>Art der Spende:</strong> {mode === 'handover' ? 'Übergabe an Geschäftsstelle' : 'Abholung'}</li>
         {mode === 'pickup' && (
           <>
-            <li><strong>Abholadresse:</strong> {address}</li>
-            <li><strong>PLZ:</strong> {plz}</li>
+            <li><strong>Abholadresse:</strong> {street + " " + houseNumber}</li>
+            <li><strong>PLZ:</strong> {postalCode}</li>
+            {additionalInfo && <li><strong>Bemerkung:</strong> {additionalInfo}</li>}
           </>
         )}
         <li><strong>Kategorie Kleidung:</strong> {clothes}</li>
