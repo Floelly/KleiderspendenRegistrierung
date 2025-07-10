@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Button from "../ui/Button";
+import { printNode } from "../../utils/printNode";
 
 const ConfirmationGrid = styled.div`
     display: grid;
@@ -27,7 +28,7 @@ export default function Confirmation({ data, onNew }) {
   const ts = new Date(createdAt);
 
   return (
-    <section>
+    <div id="registration-confirmation">
       <h2 style={{textAlign: "center"}}>Kleiderspende registriert!</h2>
 
         <ConfirmationGrid>
@@ -62,9 +63,9 @@ export default function Confirmation({ data, onNew }) {
             <strong>Uhrzeit:</strong> 
             <span>{ts.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
 
-            <Button onClick={() => window.print()}>Drucken</Button>
+            <Button onClick={() => printNode('registration-confirmation')}>Drucken</Button>
             <Button onClick={onNew}>Weitere Spende registrieren</Button>
         </ConfirmationGrid>
-    </section>
+    </div>
   );
 }
