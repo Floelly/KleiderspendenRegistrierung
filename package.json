@@ -6,12 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
+    "lint": "eslint \"src/**/*.{js,jsx}\"",
     "preview": "vite preview",
     "test": "vitest run --reporter verbose",
     "test:watch": "vitest --reporter verbose --watch",
     "test:coverage": "vitest run --reporter verbose --coverage",
-    "test:coverage:watch": "vitest --reporter verbose --coverage --watch"
+    "test:coverage:watch": "vitest --reporter verbose --coverage --watch",
+    "format": "prettier --check \"src/**/*.{js,jsx,html,json,css,md}\"",
+  "format:fix": "prettier --write \"src/**/*.{js,jsx,html,json,css,md}\""
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
