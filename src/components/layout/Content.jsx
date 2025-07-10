@@ -5,9 +5,7 @@ import News from "../sections/News";
 import DonationLocation from "../sections/DonationLocation";
 import InDemandItems from "../sections/InDemandItems";
 import Registration from "../sections/Registration";
-import Sponsors from "../sections/Sponsors";
 import JoinUs from "../sections/JoinUs";
-import PartnerProjects from "../sections/PartnerProjects";
 
 export default function Main() {
   let sectionCounter = 0;
@@ -21,9 +19,7 @@ export default function Main() {
       <DonationLocation sectionNumber={++sectionCounter}></DonationLocation>
       <News sectionNumber={++sectionCounter}></News>
       <Registration sectionNumber={++sectionCounter}></Registration>
-      <Sponsors sectionNumber={++sectionCounter}></Sponsors>
       <JoinUs sectionNumber={++sectionCounter}></JoinUs>
-      <PartnerProjects sectionNumber={++sectionCounter}></PartnerProjects>
     </main>
   );
 }
