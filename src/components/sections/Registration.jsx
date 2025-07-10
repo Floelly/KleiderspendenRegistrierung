@@ -1,11 +1,7 @@
-import styled from "styled-components";
 import Section from "../ui/Section";
 import RegistrationForm from "../forms/RegistrationForm.jsx";
+import ConfirmRegistration from "./ConfirmRegistration.jsx";
 import { useState } from "react";
-
-const ConfirmRegistration = styled.h1`
-  
-`
 
 export default function Registration() {
   const [submittedData, setSubmittedData] = useState(null);
@@ -14,7 +10,7 @@ export default function Registration() {
     <>
       <Section id="registration">
         {submittedData ? 
-          <ConfirmRegistration data={submittedData} onPointerDown={() => setSubmittedData(null)}>Registration Confirmation</ConfirmRegistration>
+          <ConfirmRegistration data={submittedData} onNew={() => setSubmittedData(null)}>Registration Confirmation</ConfirmRegistration>
         : <RegistrationForm onSuccess={setSubmittedData}/>}
       </Section>
     </>
