@@ -1,3 +1,4 @@
+import { HashLink } from "react-router-hash-link";
 import CardGrid from "../ui/CardGrid";
 import ContentContainer from "../ui/Container";
 import StyledFooter from "../ui/FancyFooter";
@@ -39,8 +40,8 @@ export default function Footer() {
           <FooterSection>
             <h3>Rechtliches</h3>
             <ul>
-              <li><a href="/impressum">Impressum</a></li>
-              <li><a href="/datenschutz">Datenschutzerklärung</a></li>
+              <li><HashLink to="/impressum#top">Impressum</HashLink></li>
+              <li><HashLink to="/datenschutz#top">Datenschutz</HashLink></li>
             </ul>
           </FooterSection>
 
@@ -64,10 +65,10 @@ export default function Footer() {
           <FooterSection>
             <h3>Navigation</h3>
             <ul>
-              <li><a href="/">Startseite</a></li>
-              <li><a href="/spenden">Kleider spenden</a></li>
-              <li><a href="/ueber-uns">Über uns</a></li>
-              <li><a href="/ueber-uns">Jetzt Mitglied werden</a></li>
+              <li><HashLink smooth to="/#top">Home</HashLink></li>
+              <li><HashLink smooth to="/#about">Über uns</HashLink></li>
+              <li><HashLink smooth to="/#donation-locations">Wohin wird gespendet</HashLink></li>
+              <li><HashLink smooth to="/#registration">Jetzt Kleider spenden</HashLink></li>
             </ul>
           </FooterSection>
         </CardGrid>

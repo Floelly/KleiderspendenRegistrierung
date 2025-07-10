@@ -34,7 +34,7 @@ export const Theme = {
     h1: 'clamp(2rem, 4vw, 3rem)',
     h2: 'clamp(1.5rem, 3vw, 2.6rem)',
     small: 'clamp(0.875rem, 1vw, 1.2rem)',
-    copyright: '.8rem',
+    copyright: 'clamp(.8rem, 1vw, 1rem)',
   },
   colors: {
     light: '#fdfaf5',
