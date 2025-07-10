@@ -1,6 +1,79 @@
 import { useForm } from 'react-hook-form';
+import Button from '../ui/Button.jsx'
+import Select from '../ui/Select.jsx';
+import Input from '../ui/Input.jsx';
+import styled from 'styled-components';
+import { FaTruckFast } from "react-icons/fa6";
+import { TbBuildingStore } from "react-icons/tb";
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+const FormGrid = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: ${({theme}) => theme.spacing.m};
+
+  @media screen AND (min-width: ${({theme}) => theme.breakpoints.m}) {
+    max-width: ${({theme}) => theme.breakpoints.l};
+    width: 90%;
+    margin: 0 auto;
+  }
+`;
+
+const GridLabel = styled.label`
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: ${({theme}) => theme.spacing.xs};
+
+    @media screen AND (min-width: ${({theme}) => theme.breakpoints.m}) {
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        gap: ${({theme}) => theme.spacing.m};
+
+        & > span {
+            text-align:right;
+        }
+  }
+`
+
+const ModeWrapper = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: ${({theme}) => theme.spacing.m};
+    text-align: center;
+`
+
+const HiddenRadio = styled.input.attrs({ type: 'radio' })`
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+  &:checked + label {
+    background-color: ${({theme}) => theme.colors.primary};
+    border-color: ${({theme}) => theme.colors.primary};
+  }
+`;
+
+const RadioLabel = styled.label`
+  display: block;
+  //align-items: center;
+  //gap: ${({theme}) => theme.spacing.xs};
+  padding: ${({theme}) => theme.spacing.s} ${({theme}) => theme.spacing.m};
+  border: 1px solid;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+  &:hover {
+    border-color: ${({theme}) => theme.colors.primary};
+  }
+`;
+
+const IconWrapper = styled.p`
+    margin:0;
+    font-size: ${({theme}) => theme.sizes.iconSize};
+`
 
 export default function RegistrationForm({ onSuccess }) {
   const { register, handleSubmit, watch } = useForm({
@@ -26,29 +99,38 @@ export default function RegistrationForm({ onSuccess }) {
   const mode = watch('mode');
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      {/* 1) Modus */}
-      <label>
-        <input
-          type="radio"
-          value="handover"
-          {...register('mode')}
-        />
-        Übergabe an Geschäftsstelle
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="pickup"
-          {...register('mode')}
-        />
-        Abholung (Sammelfahrzeug)
-      </label>
-      {mode === 'pickup' && (
+    <FormGrid onSubmit={handleSubmit(onSubmit)}>
+        <h2>Jetzt registrieren und Kleider spenden</h2>
+        {/* 1) Modus */}
+        <ModeWrapper>
+            <HiddenRadio
+                id="handover"
+                value="handover"
+                {...register('mode')}
+                name="mode"
+                />
+            <RadioLabel htmlFor="handover">
+                <IconWrapper><TbBuildingStore /></IconWrapper>
+                <span>Übergabe an Geschäftsstelle</span>
+            </RadioLabel>
+            <HiddenRadio
+                id="pickup"
+                value="pickup"
+                {...register('mode')}
+                name="mode"
+            />
+            <RadioLabel htmlFor="pickup">
+                <IconWrapper><FaTruckFast/></IconWrapper>
+                <span>Abholung (Sammelfahrzeug)</span>
+            </RadioLabel>
+        </ModeWrapper>
+
+      { /* 1.5) Adress */
+      mode === 'pickup' && (
         <>
-            <label>
-                Postleitzahl
-                <input 
+            <GridLabel>
+                <span>Postleitzahl</span>
+                <Input 
                     type="text"
                     inputMode='numeric'
                     pattern="\d{5}"
@@ -56,35 +138,38 @@ export default function RegistrationForm({ onSuccess }) {
                     required 
                     {...register('postalCode')} 
                     placeholder="PLZ" />
-            </label>
-            <label>
-                Straße
-                <input 
+            </GridLabel>
+            <GridLabel>
+                <span>Straße</span>
+                <Input 
                     type="text" 
                     required
                     {...register('street')} 
                     placeholder="Straße" />
-            </label>
-            <label>
-                Hausnummer
-                <input 
+            </GridLabel>
+            <GridLabel>
+                <span>Hausnummer</span>
+                <Input 
                     type="text" 
-                    pattern="/^[0-9]{1,4}[a-zA-Z]?(-[0-9]{1,4})?$/"
+                    pattern="^[0-9]{1,4}[a-zA-Z]?(-[0-9]{1,4})?$"
                     required
                     {...register('houseNumber')} 
                     placeholder="Hausnummer" />
-            </label>
-            <label>
-            Zusatzbemerkung
-            <input type="text" {...register('additionalInfo')} placeholder="z.B. 3. Stock, links" />
-            </label>
+            </GridLabel>
+            <GridLabel>
+                <span>Zusatzbemerkung</span>
+                <Input 
+                    type="text" 
+                    {...register('additionalInfo')} 
+                    placeholder="z.B. 3. Stock, links" />
+            </GridLabel>
         </>
       )}
 
       {/* 2) Kleiderart */}
-      <label>
-        Art der Kleidung
-        <select required {...register('clothes')}>
+      <GridLabel>
+        <span>Art der Kleidung</span>
+        <Select required {...register('clothes')}>
           <option value="" disabled>Bitte wählen …</option>
           <option value="Oberteile (T‑Shirts, Blusen, Hemden)">Oberteile (T‑Shirts, Blusen, Hemden)</option>
           <option value="Hosen & Röcke">Hosen & Röcke</option>
@@ -92,22 +177,22 @@ export default function RegistrationForm({ onSuccess }) {
           <option value="shoes">Schuhe</option>
           <option value="Kinder­kleidung">Kinder­kleidung</option>
           <option value="Gemischte Kleiderspende">Gemischte Kleiderspende</option>
-        </select>
-      </label>
+        </Select>
+      </GridLabel>
 
       {/* 3) Krisenregion */}
-      <label>
-        Krisengebiet
-        <select required {...register('region')}>
+      <GridLabel>
+        <span>Krisengebiet</span>
+        <Select required {...register('region')}>
           <option value="" disabled>Bitte wählen …</option>
           <option value="Ukraine">Ukraine</option>
           <option value="Gaza">Gaza</option>
           <option value="Sudan">Sudan</option>
           <option value="Afghanistan">Afghanistan</option>
-        </select>
-      </label>
+        </Select>
+      </GridLabel>
 
-      <button type="submit">Weiter</button>
-    </form>
+      <Button type="submit">Weiter</Button>
+    </FormGrid>
   );
 }
