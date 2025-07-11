@@ -1,6 +1,6 @@
-import FancyBordure from "../ui/FancyBordure.jsx";
-import ContentContainer from "../ui/Container.jsx";
-import CenteredText from "../ui/CenteredText.jsx";
+import FancyBordure from "ui/rare/FancyBordure.jsx";
+import ContentContainer from "ui/ContentContainer.jsx";
+import CenteredText from "ui/CenteredText.jsx";
 
 export default function Impressum() {
   return (

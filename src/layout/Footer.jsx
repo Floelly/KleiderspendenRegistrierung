@@ -1,8 +1,9 @@
 import { HashLink } from "react-router-hash-link";
-import CardGrid from "../ui/CardGrid";
-import ContentContainer from "../ui/Container";
-import StyledFooter from "../ui/FancyFooter";
 import styled from "styled-components";
+
+import CardGrid from "ui/CardGrid";
+import ContentContainer from "ui/ContentContainer";
+import StyledFooter from "layoutComponents/FancyFooter";
 
 const FooterSection = styled.div`
   h3 {

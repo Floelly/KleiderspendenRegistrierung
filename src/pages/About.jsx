@@ -1,7 +1,8 @@
-import Section from "../ui/Section";
-import RoundImage from "../ui/RoundImage";
-import aboutImage from "/src/assets/About_Kleiderspende.jpg";
 import styled from "styled-components";
+
+import Section from "layoutComponents/Section";
+import RoundImage from "ui/RoundImage";
+import aboutImage from "assets/About_Kleiderspende.jpg";
 
 const SideBySide = styled.div`
   @media screen AND (min-width: ${({ theme }) => theme.breakpoints.l}) {

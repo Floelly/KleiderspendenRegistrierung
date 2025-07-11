@@ -1,7 +1,7 @@
-import Section from "../ui/Section";
-import CardGrid from "../ui/CardGrid.jsx";
-import SuccessCard from "../ui/SuccessCard.jsx";
-import CenteredText from "../ui/CenteredText.jsx";
+import Section from "layoutComponents/Section.jsx";
+import CardGrid from "ui/CardGrid.jsx";
+import CenteredText from "ui/CenteredText.jsx";
+import SuccessCard from "ui/rare/SuccessCard.jsx";
 
 export default function Success() {
   return (

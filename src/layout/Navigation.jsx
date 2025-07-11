@@ -1,6 +1,7 @@
-import NavModal from "../ui/NavModal";
-import Button from "../ui/Button";
 import { HashLink } from "react-router-hash-link";
+
+import NavModal from "layoutComponents/NavModal";
+import Button from "ui/Button";
 
 export default function Navigation({ open, onClose }) {
   return (

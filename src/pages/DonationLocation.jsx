@@ -1,12 +1,13 @@
-import Section from "../ui/Section";
-import kapstadtImage from "/src/assets/location_kapstadt.jpg";
-import manilaImage from "../../assets/location_manila.jpg";
-import ukraineImage from "../../assets/location_ukraine.jpg";
-import RoundImage from "../ui/RoundImage";
-import LocationCard from "../ui/LocationCard";
-import CardGrid from "../ui/CardGrid";
-import CenteredText from "../ui/CenteredText";
-import Button from "../ui/Button";
+import Section from "layoutComponents/Section";
+import RoundImage from "ui/RoundImage";
+import CardGrid from "ui/CardGrid";
+import CenteredText from "ui/CenteredText";
+import LocationCard from "ui/rare/LocationCard";
+import Button from "ui/Button";
+
+import manilaImage from "assets/location_manila.jpg";
+import ukraineImage from "assets/location_ukraine.jpg";
+import kapstadtImage from "assets/location_kapstadt.jpg";
 
 export default function DonationLocation() {
   return (

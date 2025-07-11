@@ -1,4 +1,3 @@
-import Section from "../ui/Section";
 import {
   GiUnderwear,
   GiMonclerJacket,
@@ -7,9 +6,11 @@ import {
 } from "react-icons/gi";
 import { PiShirtFoldedFill } from "react-icons/pi";
 import { IoShirt } from "react-icons/io5";
-import CenteredText from "../ui/CenteredText";
-import DemandCard from "../ui/DemandCard";
-import CardGrid from "../ui/CardGrid";
+
+import Section from "layoutComponents/Section";
+import CenteredText from "ui/CenteredText";
+import CardGrid from "ui/CardGrid";
+import DemandCard from "ui/rare/DemandCard";
 
 export default function InDemandItems() {
   return (

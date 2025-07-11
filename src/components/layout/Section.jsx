@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import ContentContainer from "./Container";
+
+import ContentContainer from "ui/ContentContainer";
 
 const StyledSection = styled.section`
   background-color: ${({ theme }) => theme.colors.light};

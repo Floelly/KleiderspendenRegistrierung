@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
-import FancyHeader from "../ui/FancyHeader";
-import NavButton from "../ui/NavButton";
-import Logo from "../ui/Logo";
-import { HeaderContainer } from "../ui/Container.jsx";
-import Navigation from "./Navigation.jsx";
 import { useLocation } from "react-router-dom";
-import DonateButton from "../ui/DonateButton.jsx";
+import styled from "styled-components";
+
+import Navigation from "src/layout/Navigation.jsx";
+import FancyHeader from "layoutComponents/FancyHeader.jsx";
+import NavButton from "ui/rare/NavButton.jsx";
+import Logo from "ui/rare/Logo.jsx";
+import { HeaderContainer } from "ui/ContentContainer.jsx";
+import DonateButton from "ui/rare/DonateButton.jsx";
 
 const Container = styled(HeaderContainer)`
   display: flex;

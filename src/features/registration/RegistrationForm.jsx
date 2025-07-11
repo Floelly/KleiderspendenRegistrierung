@@ -1,13 +1,16 @@
 import { useForm } from "react-hook-form";
-import Button from "../ui/Button.jsx";
-import Select from "../ui/Select.jsx";
-import Input from "../ui/Input.jsx";
 import styled from "styled-components";
 import { FaTruckFast } from "react-icons/fa6";
 import { TbBuildingStore } from "react-icons/tb";
 import { zodResolver } from "@hookform/resolvers/zod";
+
 import schema from "./RegistrationSchema.js";
-import locations from "/src/assets/donationLocations.json";
+
+import Button from "ui/Button.jsx";
+import Select from "ui/Select.jsx";
+import Input from "ui/Input.jsx";
+
+import locations from "assets/donationLocations.json";
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 

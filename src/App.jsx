@@ -1,11 +1,12 @@
-import Home from "./components/layout/Home";
 import { ThemeProvider } from "styled-components";
 import { Theme as theme } from "./styles/Theme";
-import GlobalStyle from "./styles/GlobalStyle";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import Layout from "./components/layout/Layout";
-import Impressum from "./components/layout/Impressum";
-import Datenschutz from "./components/layout/Datenschutz";
+
+import GlobalStyle from "src/styles/GlobalStyle";
+import Layout from "src/layout/PageLayout";
+import Home from "src/layout/Home";
+import Impressum from "pages/Impressum";
+import Datenschutz from "pages/Datenschutz";
 
 function App() {
   return (

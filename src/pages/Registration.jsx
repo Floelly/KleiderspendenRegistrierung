@@ -1,7 +1,8 @@
-import Section from "../ui/Section";
-import RegistrationForm from "../forms/RegistrationForm.jsx";
-import ConfirmRegistration from "./ConfirmRegistration.jsx";
 import { useState } from "react";
+
+import Section from "layoutComponents/Section.jsx";
+import RegistrationForm from "src/features/registration/RegistrationForm.jsx";
+import ConfirmRegistration from "src/features/registration/ConfirmRegistration.jsx";
 
 export default function Registration() {
   const [submittedData, setSubmittedData] = useState(null);

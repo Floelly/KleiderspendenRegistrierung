@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import Button from "../ui/Button";
 import { printNode } from "../../utils/printNode";
+import styled from "styled-components";
+
+import Button from "ui/Button";
 
 const ConfirmationGrid = styled.div`
   display: grid;

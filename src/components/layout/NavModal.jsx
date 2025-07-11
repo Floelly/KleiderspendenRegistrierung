@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
-import useLockBodyScroll from "../../hooks/useLockBodyScroll.js";
+
+import useLockBodyScroll from "src/hooks/useLockBodyScroll.js";
 
 const Backdrop = styled.div`
   position: fixed;

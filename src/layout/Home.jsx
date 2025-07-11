@@ -1,11 +1,11 @@
-import Titlepage from "../sections/Titlepage";
-import About from "../sections/About";
-import Success from "../sections/Success";
-import News from "../sections/News";
-import DonationLocation from "../sections/DonationLocation";
-import InDemandItems from "../sections/InDemandItems";
-import Registration from "../sections/Registration";
-import JoinUs from "../sections/JoinUs";
+import Titlepage from "pages/Titlepage";
+import About from "pages/About";
+import Success from "pages/Success";
+import News from "pages/News";
+import DonationLocation from "pages/DonationLocation";
+import InDemandItems from "pages/InDemandItems";
+import Registration from "pages/Registration";
+import JoinUs from "pages/JoinUs";
 
 export default function Home() {
   let sectionCounter = 0;

@@ -1,5 +1,5 @@
-import Section from "../ui/Section";
-import TitlepageContainer from "../ui/TitlepageContainer";
+import Section from "layoutComponents/Section.jsx";
+import TitlepageContainer from "ui/rare/TitlepageContainer.jsx";
 
 export default function Titlepage() {
   return (

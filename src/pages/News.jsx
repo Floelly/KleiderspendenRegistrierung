@@ -1,9 +1,10 @@
-import LandscapeImage from "../ui/LandscapeImage";
-import Section from "../ui/Section";
-import annaImage from "/src/assets/news_anna.jpg";
-import clothsImage from "/src/assets/news_clothes.jpg";
-import hamburgImage from "/src/assets/news_hamburg.jpg";
-import CardGrid from "../ui/CardGrid.jsx";
+import Section from "layoutComponents/Section.jsx";
+import LandscapeImage from "ui/LandscapeImage.jsx";
+import CardGrid from "ui/CardGrid.jsx";
+
+import clothsImage from "assets/news_clothes.jpg";
+import hamburgImage from "assets/news_hamburg.jpg";
+import annaImage from "assets/news_anna.jpg";
 
 export default function News() {
   return (

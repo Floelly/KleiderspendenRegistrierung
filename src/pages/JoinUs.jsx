@@ -1,13 +1,14 @@
-import CardGrid from "../ui/CardGrid";
-import CenteredText from "../ui/CenteredText";
-import LocationCard from "../ui/LocationCard";
-import Section from "../ui/Section";
-import RoundImage from "../ui/RoundImage";
-import aboutImage from "/src/assets/About_Kleiderspende.jpg";
-import workImage from "/src/assets/joinUs_Teamarbeit.jpg";
-import memberImage from "/src/assets/joinUs_Mitgliedschaft.jpg";
-import Button from "../ui/Button.jsx";
-import DonateButton from "../ui/DonateButton.jsx";
+import Section from "layoutComponents/Section.jsx";
+import CardGrid from "ui/CardGrid.jsx";
+import CenteredText from "ui/CenteredText.jsx";
+import LocationCard from "ui/rare/LocationCard.jsx";
+import RoundImage from "ui/RoundImage.jsx";
+import Button from "ui/Button.jsx";
+import DonateButton from "ui/rare/DonateButton.jsx";
+
+import aboutImage from "assets/About_Kleiderspende.jpg";
+import workImage from "assets/joinUs_Teamarbeit.jpg";
+import memberImage from "assets/joinUs_Mitgliedschaft.jpg";
 
 export default function JoinUs() {
   return (
