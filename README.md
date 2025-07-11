@@ -43,16 +43,20 @@ npm test
 ├── src/                   # Quellcode der Anwendung
 │   ├── assets/            # Bilder, Logos, Json-Files, statische Medien
 │   ├── components/        # React-Komponenten & Styled-Components
-│   │   ├── forms/         # Registration-Form und zugehörige Validierung
-│   │   ├── layout/        # Registration-Form und zugehörige Validierung
-│   ├── pages/             # Seiten der Anwendung (z. B. Home, Registrierung)
-│   ├── routes/            # React Routen
+│   │   ├── layout/        # größere Componenten & Widgets (z. B. Modal, Section)
+│   │   └── ui/            # Basis Componenten (z. B. Button, GridContainer)
+│   ├── features/          # Bislange nur Registrierungs Feature
+│   ├── hooks/             # React hooks (z. B. bodyLock script)
+│   ├── layout/            # Basis Layout der Seite, Navigationsmenü, Header, Footer
+│   ├── pages/             # Seiten der Anwendung (z. B. About, Registrierung, Impressum)
 │   ├── styles/            # Globale Styled-Components oder Themes
+│   ├── utils/             # Globale util Funktionen (z. B. printNode)
 │   ├── App.jsx            # Hauptkomponente
 │   └── main.jsx           # Einstiegspunkt für React (mit Vite)
-├── tests/                 # Testsetup und Integrationstests
-├── eslint.config.js       # Linter-Konfiguration
+├── tests/                 # Testsetup (später Integrationstests)
+├── eslint.config.js       # Linter-Konfiguration (nicht optimal)
 ├── vite.config.js         # Vite Build-Konfiguration
 ├── package.json           # Projekt-Metadaten und Abhängigkeiten
+├── index.html             # Aker der React App
 └── README.md              # Diese Datei
 ```
